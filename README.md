@@ -28,3 +28,9 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Technical test
+
+- Link to the test: [https://vite-react-ts.vercel.app/](https://gist.github.com/fabianmedina09/73a7e4fa45f133aff2baedb25f174b0e)
+- Project Manager: [https://www.linkedin.com/in/roberto-rodriguez-8a7012224/](https://www.linkedin.com/in/roberto-rodriguez-8a7012224/)
+- Page to replicate: [agora2030](https://agora2030.org/)
