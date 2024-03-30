@@ -45,13 +45,16 @@ const ButtonLink = ({
   icon,
   iconPosition = "left",
   size = "medium",
+  className = "",
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  buttonType,
   ...props
 }: ButtonLinkProps) => {
   if (!to) {
     throw new Error('The "to" prop is required for ButtonLink');
   }
 
-  const styleLink = `${styles[variant]} ${styles[size]}`; // Update this
+  const styleLink = `${styles[variant]} ${styles[size]} ${className}`; // Update this
 
   return (
     <Link to={to} className={`flex items-center ${styleLink}`} {...props}>

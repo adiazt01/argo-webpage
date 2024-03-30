@@ -1,6 +1,7 @@
-import { Link } from "lucide-react";
+import { Eye, Link } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Typography } from "../components/Typography";
+import { Button } from "../components/Button";
 
 export const LandingPage = () => {
   return (
@@ -30,57 +31,96 @@ export const LandingPage = () => {
         </div>
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <li>
-            <article className="relative flex flex-col gap-4">
+            <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Programa 1"
-                className="h-80 w-full rounded-lg object-cover"
+                className="h-80 w-full rounded-b-2xl object-cover"
               />
-              <Typography variant="h4" className="mt-4">
-                Programa 1
-              </Typography>
-              <Typography variant="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis dicta unde reiciendis autem, velit aspernatur
-                voluptate nesciunt, eos sint illum modi molestias optio.
-                Laboriosam aliquid facilis voluptates unde placeat.
-              </Typography>
+              <div className="flex min-h-56 flex-col gap-2 p-4">
+                <Typography variant="h4">Programa 1</Typography>
+                <Typography variant="p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio facilis dicta unde reiciendis autem, velit
+                  aspernatur voluptate nesciunt, eos sint illum modi molestias
+                  optio. Laboriosam aliquid facilis voluptates unde placeat.
+                </Typography>
+              </div>
+              <footer className="flex justify-end px-4 pb-4">
+                <Button
+                  variant="primary"
+                  buttonType="link"
+                  size="small"
+                  to="/home"
+                  icon={<Eye />}
+                  iconPosition="right"
+                  className=""
+                >
+                  Ver mas
+                </Button>
+              </footer>
             </article>
           </li>
           <li>
-            <article className="relative flex flex-col gap-4">
+          <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Programa 1"
-                className="h-80 w-full rounded-lg object-cover"
+                className="h-80 w-full rounded-b-2xl object-cover"
               />
-              <Typography variant="h4" className="mt-4">
-                Programa 1
-              </Typography>
-              <Typography variant="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis dicta unde reiciendis autem, velit aspernatur
-                voluptate nesciunt, eos sint illum modi molestias optio.
-                Laboriosam aliquid facilis voluptates unde placeat.
-              </Typography>
+              <div className="flex min-h-56 flex-col gap-2 p-4">
+                <Typography variant="h4">Programa 1</Typography>
+                <Typography variant="p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio facilis dicta unde reiciendis autem, velit
+                  aspernatur voluptate nesciunt, eos sint illum modi molestias
+                  optio. Laboriosam aliquid facilis voluptates unde placeat.
+                </Typography>
+              </div>
+              <footer className="flex justify-end px-4 pb-4">
+                <Button
+                  variant="primary"
+                  buttonType="link"
+                  size="small"
+                  to="/home"
+                  icon={<Eye />}
+                  iconPosition="right"
+                  className=""
+                >
+                  Ver mas
+                </Button>
+              </footer>
             </article>
           </li>
           <li>
-            <article className="relative flex flex-col gap-4">
+          <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
               <img
                 src="https://via.placeholder.com/150"
                 alt="Programa 1"
-                className="h-80 w-full rounded-lg object-cover"
+                className="h-80 w-full rounded-b-2xl object-cover"
               />
-              <Typography variant="h4" className="mt-4">
-                Programa 1
-              </Typography>
-              <Typography variant="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis dicta unde reiciendis autem, velit aspernatur
-                voluptate nesciunt, eos sint illum modi molestias optio.
-                Laboriosam aliquid facilis voluptates unde placeat.
-              </Typography>
+              <div className="flex min-h-56 flex-col gap-2 p-4">
+                <Typography variant="h4">Programa 1</Typography>
+                <Typography variant="p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio facilis dicta unde reiciendis autem, velit
+                  aspernatur voluptate nesciunt, eos sint illum modi molestias
+                  optio. Laboriosam aliquid facilis voluptates unde placeat.
+                </Typography>
+              </div>
+              <footer className="flex justify-end px-4 pb-4">
+                <Button
+                  variant="primary"
+                  buttonType="link"
+                  size="small"
+                  to="/home"
+                  icon={<Eye />}
+                  iconPosition="right"
+                  className=""
+                >
+                  Ver mas
+                </Button>
+              </footer>
             </article>
           </li>
         </ul>
