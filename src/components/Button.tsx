@@ -33,9 +33,9 @@ const styles = {
     "flex gap-2 items-center text-white text-1xl font-medium rounded-md shadow bg-rose-600 hover:bg-rose-700 hover:shadow-3xl hover:scale-105 transition-all",
   secondary: "text-white bg-gray-500 hover:bg-gray-700",
   outline: "text-blue-500 bg-white border border-blue-500 hover:bg-blue-50",
-  small: "py-1 px-3 text-sm", // Add this
-  medium: "py-2 px-4 text-base", // Add this
-  large: "py-3 px-6 text-lg", // Add this
+  small: "py-1 px-3 text-sm",
+  medium: "py-2 px-4 text-base",
+  large: "py-3 px-6 text-lg",
 };
 
 const ButtonLink = ({

@@ -1,7 +1,10 @@
-import { Eye, Link } from "lucide-react";
+import { Link } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Typography } from "../components/Typography";
-import { Button } from "../components/Button";
+import blog from "../mock/blog.json";
+import { BlogCard } from "../components/cards/BlogCard";
+import { AboutUsSection } from "../sections/AboutUsSection";
+
 
 export const LandingPage = () => {
   return (
@@ -9,6 +12,7 @@ export const LandingPage = () => {
       <Navbar />
       {/* TODO Add carousel in responsive design */}
       <main className="flex min-h-screen flex-col items-center justify-center bg-neutral-100"></main>
+      <AboutUsSection />
       <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center gap-8 bg-neutral-100 px-6">
         <div className="flex flex-row flex-wrap gap-8">
           <div className="flex flex-col gap-2">
@@ -30,99 +34,9 @@ export const LandingPage = () => {
           </div>
         </div>
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <li>
-            <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Programa 1"
-                className="h-80 w-full rounded-b-2xl object-cover"
-              />
-              <div className="flex min-h-56 flex-col gap-2 p-4">
-                <Typography variant="h4">Programa 1</Typography>
-                <Typography variant="p">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio facilis dicta unde reiciendis autem, velit
-                  aspernatur voluptate nesciunt, eos sint illum modi molestias
-                  optio. Laboriosam aliquid facilis voluptates unde placeat.
-                </Typography>
-              </div>
-              <footer className="flex justify-end px-4 pb-4">
-                <Button
-                  variant="primary"
-                  buttonType="link"
-                  size="small"
-                  to="/home"
-                  icon={<Eye />}
-                  iconPosition="right"
-                  className=""
-                >
-                  Ver mas
-                </Button>
-              </footer>
-            </article>
-          </li>
-          <li>
-          <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Programa 1"
-                className="h-80 w-full rounded-b-2xl object-cover"
-              />
-              <div className="flex min-h-56 flex-col gap-2 p-4">
-                <Typography variant="h4">Programa 1</Typography>
-                <Typography variant="p">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio facilis dicta unde reiciendis autem, velit
-                  aspernatur voluptate nesciunt, eos sint illum modi molestias
-                  optio. Laboriosam aliquid facilis voluptates unde placeat.
-                </Typography>
-              </div>
-              <footer className="flex justify-end px-4 pb-4">
-                <Button
-                  variant="primary"
-                  buttonType="link"
-                  size="small"
-                  to="/home"
-                  icon={<Eye />}
-                  iconPosition="right"
-                  className=""
-                >
-                  Ver mas
-                </Button>
-              </footer>
-            </article>
-          </li>
-          <li>
-          <article className="relative flex flex-col shadow rounded-t-2xl overflow-hidden">
-              <img
-                src="https://via.placeholder.com/150"
-                alt="Programa 1"
-                className="h-80 w-full rounded-b-2xl object-cover"
-              />
-              <div className="flex min-h-56 flex-col gap-2 p-4">
-                <Typography variant="h4">Programa 1</Typography>
-                <Typography variant="p">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio facilis dicta unde reiciendis autem, velit
-                  aspernatur voluptate nesciunt, eos sint illum modi molestias
-                  optio. Laboriosam aliquid facilis voluptates unde placeat.
-                </Typography>
-              </div>
-              <footer className="flex justify-end px-4 pb-4">
-                <Button
-                  variant="primary"
-                  buttonType="link"
-                  size="small"
-                  to="/home"
-                  icon={<Eye />}
-                  iconPosition="right"
-                  className=""
-                >
-                  Ver mas
-                </Button>
-              </footer>
-            </article>
-          </li>
+          {blog.map((blog) => (
+            <BlogCard key={blog.id as string} blog={blog} />
+          ))}
         </ul>
       </section>
     </>

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Emprendiendo en el mundo de los negocios",
+    "description": "En esta entrada del blog hablaremos sobre cómo iniciar un emprendimiento y tener éxito en el mundo de los negocios.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "1"
+  },
+  {
+    "title": "Consejos para emprendedores",
+    "description": "Descubre los mejores consejos y estrategias para emprender y alcanzar tus metas empresariales.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "2"
+  },
+  {
+    "title": "El poder de la innovación",
+    "description": "Aprende cómo la innovación puede impulsar tu emprendimiento y diferenciarte en el mercado.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "3"
+  },
+  {
+    "title": "El arte del networking",
+    "description": "Conoce la importancia de crear y mantener una red de contactos sólida para el crecimiento de tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "4"
+  },
+  {
+    "title": "Cómo manejar el fracaso",
+    "description": "Descubre cómo superar los obstáculos y convertir los fracasos en oportunidades de aprendizaje en tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "5"
+  },
+  {
+    "title": "El papel de la planificación estratégica",
+    "description": "Aprende a desarrollar una planificación estratégica efectiva para alcanzar los objetivos de tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "6"
+  },
+  {
+    "title": "El impacto de las redes sociales",
+    "description": "Descubre cómo aprovechar el poder de las redes sociales para promocionar y hacer crecer tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "7"
+  },
+  {
+    "title": "El liderazgo en el emprendimiento",
+    "description": "Conoce las características y habilidades necesarias para ser un líder exitoso en el mundo del emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "8"
+  },
+  {
+    "title": "Cómo financiar tu emprendimiento",
+    "description": "Descubre las diferentes opciones de financiamiento disponibles y cómo acceder a ellas para impulsar tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "9"
+  },
+  {
+    "title": "El proceso de creación de un producto",
+    "description": "Aprende los pasos clave para desarrollar y lanzar un producto exitoso en tu emprendimiento.",
+    "image": "https://placehold.co/600x400/png",
+    "id": "10"
+  }
+]
