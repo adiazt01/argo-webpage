@@ -1,11 +1,33 @@
 import { Star } from "lucide-react";
 import { Typography } from "../components/Typography";
+import { Link } from "react-router-dom";
 
 export const AboutUsSection = () => {
   return (
-    <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-start gap-8 px-12">
+    <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-start gap-12 px-12">
+      <header className="flex w-full flex-col gap-8 md:flex-row">
+        <div className="flex max-w-lg flex-col gap-2">
+          {/* TODO Add text */}
+          <Typography className="text-left" variant="h2">
+            Que hacemos?
+          </Typography>
+          <Typography className="text-left" variant="p">
+            Calibramos el ecosistema emprendedor de América Latina para crear
+            prosperidad inclusiva para el individuo, la empresa, la comunidad y
+            el medio ambiente
+          </Typography>
+        </div>
+        <div className="flex w-full flex-row justify-end">
+          {/* FIXME add respctiv link to the page */}
+          <a href="/login" className="">
+            Conocer mas sobre nuestrto programas{" "}
+            <Link className="inline-block" />
+          </a>
+        </div>
+      </header>
+      {/* TODO change icon and view and create components */}
       {/* TODO add badge to the component */}
-      <div className="grid w-full grid-cols-1 gap-4">
+      <ul className="grid w-full grid-cols-1 gap-4">
         <article className="relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
           <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
             <Typography
@@ -86,7 +108,7 @@ export const AboutUsSection = () => {
             </picture>
           </article>
         </div>
-      </div>
+      </ul>
     </section>
   );
 };

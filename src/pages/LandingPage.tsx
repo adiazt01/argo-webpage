@@ -5,7 +5,6 @@ import blog from "../mock/blog.json";
 import { BlogCard } from "../components/cards/BlogCard";
 import { AboutUsSection } from "../sections/AboutUsSection";
 
-
 export const LandingPage = () => {
   return (
     <>
