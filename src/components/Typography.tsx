@@ -15,7 +15,7 @@ const styles = {
   h4: "text-xl font-medium",
   h5: "text-lg font-bold",
   h6: "text-base font-bold",
-  p: "text-base font-normal",
+  p: "text-base",
   span: "text-sm",
 };
 

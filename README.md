@@ -34,3 +34,6 @@ export default {
 - Link to the test: [https://vite-react-ts.vercel.app/](https://gist.github.com/fabianmedina09/73a7e4fa45f133aff2baedb25f174b0e)
 - Project Manager: [https://www.linkedin.com/in/roberto-rodriguez-8a7012224/](https://www.linkedin.com/in/roberto-rodriguez-8a7012224/)
 - Page to replicate: [agora2030](https://agora2030.org/)
+
+## Atriibution to the resources used
+
