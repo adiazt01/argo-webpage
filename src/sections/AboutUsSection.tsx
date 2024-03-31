@@ -27,6 +27,8 @@ export const AboutUsSection = () => {
       </header>
       {/* TODO change icon and view and create components */}
       {/* TODO add badge to the component */}
+      {/* FIXME Change color typography because contrast */}
+      {/* TODO  effecto hover */}
       <ul className="grid w-full grid-cols-1 gap-4">
         <article className="relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
           <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
