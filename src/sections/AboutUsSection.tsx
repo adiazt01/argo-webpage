@@ -1,20 +1,20 @@
-import { Star } from "lucide-react";
+import { Link, Star } from "lucide-react";
 import { Typography } from "../components/Typography";
-import { Link } from "react-router-dom";
+import { LayoutSection } from "../layout/LayoutSection";
 
 export const AboutUsSection = () => {
   return (
-    <section className="mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-start gap-12 px-12">
+    <LayoutSection>
       <header className="flex w-full flex-col gap-8 md:flex-row">
         <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}
           <Typography className="text-left" variant="h2">
-            Que hacemos?
+            ¿Qué hacemos?
           </Typography>
           <Typography className="text-left" variant="p">
-            Calibramos el ecosistema emprendedor de América Latina para crear
-            prosperidad inclusiva para el individuo, la empresa, la comunidad y
-            el medio ambiente
+            Ofrecemos formación empresarial, vinculación a mercados y acceso a
+            financiamiento a emprendedores y pequeñas empresas en crecimiento en
+            su camino hacia la sostenibilidad económica, social y ambiental.
           </Typography>
         </div>
         <div className="flex w-full flex-row justify-end">
@@ -37,13 +37,13 @@ export const AboutUsSection = () => {
               className="text-left text-neutral-300"
               variant="h3"
             >
-              Emprendimientos y pequeñas empresas en crecimiento
+              Ecosistema
             </Typography>
             <Typography className="text-left text-neutral-300" variant="p">
-              Ofrecemos formación empresarial, vinculación a mercados y acceso a
-              financiamiento a emprendedores y pequeñas empresas en crecimiento
-              en su camino hacia la sostenibilidad económica, social y
-              ambiental.
+              Contribuimos al fortalecimiento del ecosistema de emprendedores y
+              pequeñas empresas en crecimiento a través de eventos, tales como
+              el programa Formando Catalizadores, y el co-liderazgo de la Red de
+              Impacto, integrada por más de 100 organizaciones de la región.
             </Typography>
           </div>
           <picture className="relative w-full">
@@ -64,13 +64,14 @@ export const AboutUsSection = () => {
                 className="text-left text-neutral-200"
                 variant="h3"
               >
-                Emprendimientos y pequeñas empresas en crecimiento
+                Proyectos inclusivos
               </Typography>
               <Typography className="text-left text-neutral-300" variant="p">
-                Ofrecemos formación empresarial, vinculación a mercados y acceso
-                a financiamiento a emprendedores y pequeñas empresas en
-                crecimiento en su camino hacia la sostenibilidad económica,
-                social y ambiental.
+                Ejecutamos proyectos específicos junto a aliados con los que
+                compartimos nuestra visión por la inclusión financiera, la
+                equidad de género, la diversificación, resiliencia y
+                sostenibilidad en las cadenas de valor, y la adaptación al
+                cambio climático en la región.
               </Typography>
             </div>
             <picture className="relative w-full">
@@ -111,6 +112,6 @@ export const AboutUsSection = () => {
           </article>
         </div>
       </ul>
-    </section>
+    </LayoutSection>
   );
 };

@@ -1,29 +1,18 @@
-import { Link } from "react-router-dom";
 import { Typography } from "../components/Typography";
 import blog from "../mock/blog.json";
 import { BlogCard } from "../components/cards/BlogCard";
+import { LayoutSection } from "../layout/LayoutSection";
 
 export const OpenCallsAndNewsSection = () => {
   return (
-    <section className="flex min-h-screen flex-col justify-start">
+    <LayoutSection>
       <header className="flex w-full flex-col gap-8 md:flex-row">
-        <div className="flex max-w-lg flex-col gap-2">
+        <div className="flex w-full flex-col gap-2">
           {/* TODO Add text */}
           <Typography className="text-left" variant="h2">
-            Que hacemos?
+          Convocatorias abiertas y novedades
+
           </Typography>
-          <Typography className="text-left" variant="p">
-            Calibramos el ecosistema emprendedor de América Latina para crear
-            prosperidad inclusiva para el individuo, la empresa, la comunidad y
-            el medio ambiente
-          </Typography>
-        </div>
-        <div className="flex w-full flex-row justify-end">
-          {/* FIXME add respctiv link to the page */}
-          <a href="/login" className="">
-            Conocer mas sobre nuestrto programas{" "}
-            <Link to="/" className="inline-block" />
-          </a>
         </div>
       </header>
 
@@ -33,6 +22,6 @@ export const OpenCallsAndNewsSection = () => {
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </ul>
-    </section>
+    </LayoutSection>
   );
 };

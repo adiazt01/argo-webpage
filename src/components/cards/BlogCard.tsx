@@ -15,7 +15,7 @@ export const BlogCard = ({ blog }: BlogCardProps) => {
   const { title, description, image } = blog;
 
   return (
-    <article className="relative flex flex-col overflow-hidden rounded-t-2xl shadow">
+    <article className="relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
       <img
         src={image}
         alt="Programa 1"

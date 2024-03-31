@@ -7,7 +7,6 @@ export const LandingPage = () => {
     <>
       <Navbar />
       {/* TODO Add carousel in responsive design */}
-      <main className="flex min-h-screen flex-col items-center justify-center "></main>
       <AboutUsSection />
       <OpenCallsAndNewsSection />
     </>
