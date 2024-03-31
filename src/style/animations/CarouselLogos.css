@@ -1,12 +1,28 @@
+:root {
+  --duration: 1;
+}
+
 .slide {
-    animation: slide 3s linear infinite;
+  animation: slide infinite linear;
+  animation-duration: calc(20s * var(--duration));
+}
+
+.slide:hover {
+  animation-play-state: paused;
 }
 
 @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
   }
+
+  to {
+    transform: translateX(calc(-100% - 24rem));
+  }
+}
+
+@media (min-width: 768px) {
+  .slide {
+    animation-duration: calc(10s * var(--duration));
+  }
+}

@@ -11,31 +11,52 @@ export const SponsorsAndFundersSection = () => {
         funders.
       </p>
       {/* Logos */}
-      <div className="flex w-full flex-row flex-nowrap gap-8 overflow-hidden">
-        {/* Logos slide */}
-        <div className="slide whitespace-nowrap">
+      <div className="relative mx-auto flex w-full max-w-3xl flex-row flex-nowrap overflow-hidden">
+        <div className="z-20 absolute bottom-0 left-0 top-0 h-full w-12 bg-gradient-to-r from-white to-transparent"></div>
+        <div className="z-20 absolute bottom-0 right-0 top-0 h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
+        <div className="z-10 slide relative flex flex-row gap-24 whitespace-nowrap">
           {Array(2)
             .fill(
               <>
                 <img
                   src="https://via.placeholder.com/150"
-                  className="inline-block mx-10 h-32 w-32"
-                  alt="Sponsor 1"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className="inline-block mx-10 h-32"
+                  className=" inline-block h-32 w-32"
                   alt="Sponsor 2"
                 />
                 <img
                   src="https://via.placeholder.com/150"
-                  className=" inline-block mx-10 h-32 w-32"
-                  alt="Sponsor 3"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
                 />
                 <img
                   src="https://via.placeholder.com/150"
-                  className=" inline-block mx-10 h-32"
-                  alt="Sponsor 4"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
+                />
+                <img
+                  src="https://via.placeholder.com/150"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
+                />
+                <img
+                  src="https://via.placeholder.com/150"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
+                />
+                <img
+                  src="https://via.placeholder.com/150"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
+                />
+                <img
+                  src="https://via.placeholder.com/150"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
+                />
+                <img
+                  src="https://via.placeholder.com/150"
+                  className=" inline-block h-32 w-32"
+                  alt="Sponsor 2"
                 />
               </>,
             )
