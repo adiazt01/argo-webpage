@@ -18,6 +18,7 @@ export const JobCard = ({ job }: JobCardProps) => {
   return (
     <article className="relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
       <div className="flex min-h-56 flex-col gap-2">
+        {/* TODO pills to indicate that's job */}
         <img
           src="https://source.unsplash.com/1600x900/?job"
           alt="Programa 1"

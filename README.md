@@ -35,5 +35,7 @@ export default {
 - Project Manager: [https://www.linkedin.com/in/roberto-rodriguez-8a7012224/](https://www.linkedin.com/in/roberto-rodriguez-8a7012224/)
 - Page to replicate: [agora2030](https://agora2030.org/)
 
+## Tecnologias usadas
+
 ## Atriibution to the resources used
 

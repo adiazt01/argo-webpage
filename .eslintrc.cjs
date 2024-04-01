@@ -8,7 +8,7 @@ module.exports = {
     "plugin:@typescript-eslint/stylistic-type-checked",
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ["react-refresh", "prettier"],
   rules: {
     "react-refresh/only-export-components": [
       "warn",
@@ -18,7 +18,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.test.json", "./tsconfig.eslint.json"],
+    project: [
+      "./tsconfig.json",
+      "./tsconfig.node.json",
+      "./tsconfig.test.json",
+      "./tsconfig.eslint.json",
+    ],
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: ["dist", ".eslintrc.cjs", "tailwind.config.js"],
