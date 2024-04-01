@@ -17,12 +17,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
@@ -37,5 +37,6 @@ export default {
 
 ## Tecnologias usadas
 
-## Atriibution to the resources used
+## Reconocimiento a los Recursos Empleados
 
+- 🎥 **[Carousel Hero Tutorial](https://www.youtube.com/watch?v=Kx8XlKRBZx8)**: Este recurso, proporcionado por _Web Dev Simplified_, fue adaptado para satisfacer las necesidades específicas de nuestro proyecto. ¡Echa un vistazo al tutorial para obtener una visión detallada de cómo se construyó nuestro carrusel!

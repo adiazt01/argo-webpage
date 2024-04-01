@@ -1,6 +1,7 @@
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { AboutUsSection } from "../sections/AboutUsSection";
+import { HeroSection } from "../sections/HeroSection";
 import { JobOportunnietesSection } from "../sections/JobOportunnietesSection";
 import { MetricsSection } from "../sections/MetricsSection";
 import { OpenCallsAndNewsSection } from "../sections/OpenCallsAndNewsSection";
@@ -11,6 +12,7 @@ export const LandingPage = () => {
   return (
     <>
       <Navbar />
+      <HeroSection />
       <AboutUsSection />
       <OpenCallsAndNewsSection />
       <SponsorsAndFundersSection />
