@@ -13,7 +13,7 @@ const styles = {
   h2: "text-3xl font-medium text-blue-900",
   h3: "text-2xl font-medium",
   h4: "text-xl font-medium",
-  h5: "text-lg font-bold",
+  h5: "text-lg font-medium",
   h6: "text-base font-bold",
   p: "text-base",
   span: "text-sm",
@@ -35,11 +35,13 @@ export const Typography: React.FC<TypographyProps> = ({
       style: {
         width: "1em",
         height: "1em",
-        marginTop: "2px",
+        margin: `0 ${iconPosition === "left" ? "0.5em 0 0 0" : "0 0 0.5em 0"}`,
         stroke: "currentColor",
         strokeWidth: "3.5",
       },
     });
+
+    console.log(Icon);
 
     return (
       <Component className={classStyle}>

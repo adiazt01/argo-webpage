@@ -1,5 +1,5 @@
-import { Link } from "lucide-react";
-import { Button } from "../Button";
+import { Link as LinkIcon } from "lucide-react";
+import { Link } from "../link/Link";
 import { Typography } from "../Typography";
 
 interface BlogCardProps {
@@ -30,17 +30,15 @@ export const BlogCard = ({ blog }: BlogCardProps) => {
         </Typography>
       </div>
       <footer className="flex justify-end px-4 pb-4">
-        <Button
+        <Link
           variant="primary"
-          buttonType="link"
           size="small"
-          to="/home"
-          icon={<Link />}
+          to={`/blog/${blog.id}`}
+          icon={<LinkIcon />}
           iconPosition="right"
-          className=""
         >
           Ver mas
-        </Button>
+        </Link>
       </footer>
     </article>
   );

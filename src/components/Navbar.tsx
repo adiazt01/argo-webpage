@@ -2,7 +2,7 @@ import { X, Menu, Heart } from "lucide-react";
 import { Logo } from "../assets";
 import { useEffect, useState } from "react";
 import "../style/Navbar.css";
-import { Button } from "./Button";
+import { Button } from "./button/Button";
 
 export const Navbar = () => {
   const [toggle, setToggle] = useState(false);

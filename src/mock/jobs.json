@@ -1,0 +1,72 @@
+[
+    {
+      "role": "Software Engineer",
+      "location": "Remote",
+      "description": "We are seeking a talented and motivated Software Engineer to join our team.",
+      "id": "12345",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Data Analyst",
+      "location": "Presencial",
+      "description": "Estamos buscando un Analista de Datos con experiencia en Python y SQL.",
+      "id": "67890",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "UI/UX Designer",
+      "location": "Remote",
+      "description": "Join our team and help create beautiful and intuitive user interfaces.",
+      "id": "54321",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Full Stack Developer",
+      "location": "Presencial",
+      "description": "Buscamos un Desarrollador Full Stack con conocimientos en JavaScript y frameworks como React y Node.js.",
+      "id": "09876",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Network Administrator",
+      "location": "Remote",
+      "description": "We are looking for a skilled Network Administrator to manage and maintain our network infrastructure.",
+      "id": "13579",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Business Analyst",
+      "location": "Presencial",
+      "description": "Estamos buscando un Analista de Negocios con experiencia en el sector financiero.",
+      "id": "24680",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "DevOps Engineer",
+      "location": "Remote",
+      "description": "Join our team and help us streamline our development and deployment processes.",
+      "id": "97531",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Quality Assurance Tester",
+      "location": "Presencial",
+      "description": "Buscamos un Tester de Calidad para asegurar la calidad de nuestros productos y servicios.",
+      "id": "86420",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Database Administrator",
+      "location": "Remote",
+      "description": "We are seeking a skilled Database Administrator to manage and optimize our database systems.",
+      "id": "21987",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "role": "Project Manager",
+      "location": "Presencial",
+      "description": "Estamos buscando un Project Manager con experiencia en la industria del software.",
+      "id": "76543",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
