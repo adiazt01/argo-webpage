@@ -18,7 +18,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.test.json"],
+    project: ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.test.json", "./tsconfig.eslint.json"],
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: ["dist", ".eslintrc.cjs", "tailwind.config.js"],

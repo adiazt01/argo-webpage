@@ -1,16 +1,5 @@
-import React, { ReactElement } from "react";
-
-type ButtonVariant = "outline" | "primary" | "secondary";
-type IconPosition = "left" | "right";
-type ButtonSize = "small" | "medium" | "large";
-
-interface BaseButtonProps {
-  variant?: ButtonVariant;
-  icon?: ReactElement;
-  iconPosition?: IconPosition;
-  size?: ButtonSize;
-  children: React.ReactNode;
-}
+import React from "react";
+import { BaseButtonProps } from "../../types/Button";
 
 const styles = {
   primary:
