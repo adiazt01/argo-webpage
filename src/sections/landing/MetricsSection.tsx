@@ -21,9 +21,13 @@ const MetricData = [
 
 export const MetricsSection = () => {
   return (
-    <section id="metrics-section" data-testid="metrics-section" className="full flex min-h-72 flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700 px-8 py-12">
+    <section
+      id="metrics-section"
+      data-testid="metrics-section"
+      className="full flex min-h-72 flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700 px-8 py-12"
+    >
       <div className="flex flex-col items-start gap-12 lg:justify-between">
-        <header className="flex max-w-lg flex-col items-start justify-center  gap-4">
+        <header className="animation__fade-in--left flex max-w-lg flex-col items-start justify-center  gap-4">
           <Typography variant="h2" className="text-center text-white">
             Nuestro impacto
           </Typography>
@@ -35,8 +39,8 @@ export const MetricsSection = () => {
         </header>
         <div className="w-full">
           <ul className="flex w-full flex-col justify-center gap-12 lg:flex-row">
-            {MetricData.map((metric) => (
-              <li key={metric.id}>
+            {MetricData.map((metric, index) => (
+              <li className={`animation__fade-in--left--${index.toString()}`} key={metric.id}>
                 <MetricsCard metric={metric} />
               </li>
             ))}
