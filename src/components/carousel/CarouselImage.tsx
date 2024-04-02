@@ -5,9 +5,12 @@ interface CarouselImageProps {
   loading: boolean;
 }
 
-export const CarouselImage = ({ image, loading }: CarouselImageProps) => {
+export const CarouselImage = ({ image }: CarouselImageProps) => {
   return (
-    <a href={image.link} >
+    <a  href={image.link}
+        target="_blank"
+        rel="noreferrer"
+    >
       <picture>
         <source media="(max-width: 768px)" srcSet={image.imageMobile} />
         <source
@@ -18,7 +21,7 @@ export const CarouselImage = ({ image, loading }: CarouselImageProps) => {
         <img
           src={image.imageWallpaper}
           alt={image.alt}
-          className={`duration-800 h-[75vh] w-full object-fill transition-all duration-100 ${loading ? "opacity-0 blur" : "opacity-100"}`}
+          className={`duration-800 h-[75vh] w-full object-fill transition-all duration-100 `}
         />
       </picture>
     </a>

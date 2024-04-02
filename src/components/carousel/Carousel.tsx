@@ -1,45 +1,15 @@
-import { CarouselDots } from './CarouselDots';
 import { CarouselButtonPrev } from "./CarouselButtonPrev";
 import { CarouselButtonNext } from "./CarouselButtonNext";
-import { useEffect, useState } from "react";
-import "./carousel.css";
-import { CarouselProps } from "../../types/carousel";
 import { CarouselImage } from "./CarouselImage";
+import { CarouselProps } from "../../types/carousel";
+import "./carousel.css";
+import { useCarouselNavigation } from "../../hooks/useCarouselNavigation";
 
 export const Carousel = ({ images }: CarouselProps) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const { currentImage, loading, nextImage, previousImage, setImage } = useCarouselNavigation(images);
 
-  useEffect(() => {
-    setLoading(true);
-    const img = new Image();
-    img.src = images[currentImage].imageWallpaper;
-    img.onload = () => {
-      setLoading(false);
-    };
-  }, [currentImage, images]);
-
-  const nextImage = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setCurrentImage((currentImage + 1) % images.length);
-    }, 300);
-  };
-
-  const previousImage = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setCurrentImage((currentImage - 1 + images.length) % images.length);
-    }, 300);
-  };
-
-  const setImage = (index: number) => {
-    if (index === currentImage) return;
-    setLoading(true);
-    setTimeout(() => {
-      setCurrentImage(index);
-    }, 300);
-  };
+  console.log(currentImage);
+  console.log(images[currentImage]);
 
   return (
     <article
