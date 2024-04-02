@@ -7,10 +7,7 @@ interface CarouselImageProps {
 
 export const CarouselImage = ({ image }: CarouselImageProps) => {
   return (
-    <a  href={image.link}
-        target="_blank"
-        rel="noreferrer"
-    >
+    <a href={image.link}>
       <picture>
         <source media="(max-width: 768px)" srcSet={image.imageMobile} />
         <source
