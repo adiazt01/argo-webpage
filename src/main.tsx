@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { LandingPage } from "./pages/LandingPage";
-import { BlogContext, BlogProvider } from "./context/BlogContext";
+import {  BlogProvider } from "./context/BlogContext";
 
 const rootElement = document.getElementById("root");
 
