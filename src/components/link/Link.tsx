@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import { Link as LinkRouter, LinkProps } from "react-router-dom";
 
 type IconPosition = "left" | "right";
-type ButtonSize = "small" | "medium" | "large";
+type ButtonSize = "small" | "medium" | "large" | "link";
 type ButtonVariant = "primary" | "secondary" | "gray";
 
 interface BaseButtonProps {
@@ -25,9 +25,10 @@ const styles = {
   link: {
     primary: "text-rose-600 hover:text-rose-700 transition-all",
     secondary: "text-gray-500 hover:text-gray-700",
-    gray: "text-gray-500 hover:text-gray-700 transition-all",
+    gray: "text-gray-500 hover:text-red-700 transition-all",
   },
   size: {
+    link: "",
     small: "py-1 px-3 text-sm",
     medium: "py-2 px-4 text-base",
     large: "py-3 px-6 text-lg",
@@ -38,7 +39,7 @@ export const Link = ({
   children,
   icon,
   iconPosition = "left",
-  size = "medium",
+  size = "link",
   appearance = "button",
   variant = "primary",
   ...props
@@ -49,8 +50,8 @@ export const Link = ({
     const Icon = React.cloneElement(icon, {
       className: "inline-block",
       style: {
-        width: "0.8em",
-        height: "0.8em",
+        width: "1em",
+        height: "1em",
         marginTop: "2px",
         stroke: "currentColor",
         strokeWidth: "3.5",

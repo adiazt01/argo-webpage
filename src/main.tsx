@@ -1,27 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
-import { LandingPage } from './pages/LandingPage';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import { LandingPage } from "./pages/LandingPage";
+import { BlogContext, BlogProvider } from "./context/BlogContext";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 if (!rootElement) {
-  throw new Error('Could not find root element');
+  throw new Error("Could not find root element");
 }
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <LandingPage />,
   },
   {
-    path: '/blog',
+    path: "/blog",
   },
 ]);
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BlogProvider>
+      <RouterProvider router={router} />
+    </BlogProvider>
   </React.StrictMode>,
 );
