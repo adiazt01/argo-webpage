@@ -5,7 +5,7 @@ import { LayoutSection } from "../layout/LayoutSection";
 
 export const OpenCallsAndNewsSection = () => {
   return (
-    <LayoutSection>
+    <LayoutSection id="open-calls-and-news-section">
       <header className="flex w-full flex-col gap-8 md:flex-row">
         <div className="flex w-full flex-col gap-2">
           {/* TODO Add text */}

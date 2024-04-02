@@ -1,6 +1,12 @@
-export const LayoutSection = ({ children }: { children: React.ReactNode }) => {
+export const LayoutSection = ({
+  children,
+  id,
+}: {
+  children: React.ReactNode;
+  id: string;
+}) => {
   return (
-    <section className="flex my-24 min-h-screen flex-col justify-start px-12 gap-12 max-w-6xl mx-auto">
+    <section id={id} className="mx-auto my-24 flex min-h-screen max-w-6xl flex-col justify-start gap-12 px-12">
       {children}
     </section>
   );

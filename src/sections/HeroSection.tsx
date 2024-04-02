@@ -20,7 +20,7 @@ const images = [
 
 export const HeroSection = () => {
   return (
-    <main className="flex min-h-screen w-full flex-col">
+    <main id="hero-section" className="flex min-h-screen w-full flex-col">
       <Carousel images={images}></Carousel>
     </main>
   );

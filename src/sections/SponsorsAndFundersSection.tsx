@@ -6,7 +6,7 @@ import { Link } from "lucide-react";
 
 export const SponsorsAndFundersSection = () => {
   return (
-    <LayoutSection>
+    <LayoutSection id="sponsors-and-funders-section">
       <header className="flex w-full flex-col gap-8 md:flex-row">
         <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}

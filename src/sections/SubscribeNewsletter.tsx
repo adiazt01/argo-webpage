@@ -20,7 +20,7 @@ export const SubscribeNewsletter = () => {
   };
 
   return (
-    <section className="full flex min-h-80 flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-700 px-8 py-12">
+    <section id="subscribe-newsletter" className="full flex min-h-80 flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-700 px-8 py-12">
       <div className="w-full max-w-4xl">
         <header className="flex flex-col items-center justify-center gap-4">
           <Typography variant="h2" className="text-white">

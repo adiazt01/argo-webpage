@@ -6,7 +6,7 @@ import { JobCard } from "../components/cards/JobCard";
 
 export const JobOportunnietesSection = () => {
   return (
-    <LayoutSection>
+    <LayoutSection id="job-opportunities-section">
       <header className="flex w-full flex-col gap-8 md:flex-row">
         <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}

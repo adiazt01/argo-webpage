@@ -21,7 +21,7 @@ const MetricData = [
 
 export const MetricsSection = () => {
   return (
-    <section className="full flex min-h-72 flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700 px-8 py-12">
+    <section id="metrics-section" className="full flex min-h-72 flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-blue-700 px-8 py-12">
       <div className="flex flex-col items-start gap-12 lg:justify-between">
         <header className="flex max-w-lg flex-col items-start justify-center  gap-4">
           <Typography variant="h2" className="text-center text-white">
