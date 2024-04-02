@@ -2,6 +2,7 @@ import { Fragment } from "react/jsx-runtime";
 import { LayoutSection } from "../../layout/LayoutSection";
 import { Typography } from "../../components/Typography";
 import { Link } from "lucide-react";
+import "../../style/animations/CarouselLogos.css"
 
 export const SponsorsAndFundersSection = () => {
   return (
