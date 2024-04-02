@@ -1,8 +1,9 @@
 import { X, Menu, Heart } from "lucide-react";
 import { LogoComplete } from "../assets";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../style/Navbar.css";
 import { Link } from "./link/Link";
+import { useScroll } from "../hooks/useScroll";
 
 const LinksSite = [
   {
@@ -17,33 +18,7 @@ const LinksSite = [
 
 export const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
-
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-
-      if (currentScrollPos !== scrollPos) {
-        setScrollPos(currentScrollPos);
-      }
-
-      if (currentScrollPos > scrollPos) {
-        setIsScrolling(true);
-      } else if (currentScrollPos < scrollPos) {
-        setIsScrolling(false);
-      }
-
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        setIsScrolling(false);
-      }, 500);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-  }, [scrollY]);
+  const { isScrolling } = useScroll({ setToggle });
 
   // TODO add active class to the current page
   // TODO add the link const with the links to the pages
@@ -57,7 +32,7 @@ export const Navbar = () => {
         isScrolling
           ? {
               transform: "translateY(-100%)",
-              transition: "transform .3s ease-in-out",
+              transition: "transform .2s ease-in-out",
             }
           : {
               transform: "translateY(0)",
