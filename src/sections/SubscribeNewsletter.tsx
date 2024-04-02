@@ -16,11 +16,11 @@ export const SubscribeNewsletter = () => {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.table(data);
+
   };
 
   return (
-    <section id="subscribe-newsletter" className="full flex min-h-80 flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-700 px-8 py-12">
+    <section data-testid="subscribe-newsletter" className="full flex min-h-80 flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-700 px-8 py-12">
       <div className="w-full max-w-4xl">
         <header className="flex flex-col items-center justify-center gap-4">
           <Typography variant="h2" className="text-white">

@@ -5,7 +5,7 @@ import { Link } from "./link/Link";
 
 export const Footer = () => {
   return (
-    <footer id="footer" className="mt-12 flex w-full flex-col gap-8 border-t bg-white pt-16">
+    <footer id="footer" data-testid="footer" className="mt-12 flex w-full flex-col gap-8 border-t bg-white pt-16">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-4 md:flex-row lg:justify-between px-4">
         <div className="flex flex-col">
           <img src={LogoComplete} className="mx-auto w-48" />
