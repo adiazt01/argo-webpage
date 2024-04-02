@@ -1,14 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import { Post } from "../types/Blog";
+import { fetchBlogPosts } from "../service/blogs";
 
 interface BlogContextProps {
   posts: Post[];
   loading: boolean;
   error: Error | null;
-}
-
-interface ApiResponse {
-  articles: Post[];
 }
 
 export const BlogContext = createContext<BlogContextProps>({
@@ -23,42 +20,23 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    const abortController = new AbortController();
-
-    const fetchBlogPosts = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://newsapi.org/v2/top-headlines?country=us&apiKey=20f85a29721942639eee179c911e8adb",
-          { signal: abortController.signal },
-        );
-        const data = (await response.json()) as ApiResponse;
-        setPosts(data.articles);
+        const posts = await fetchBlogPosts();
+        setPosts(posts);
         setLoading(false);
       } catch (error) {
         if (error instanceof Error) {
-          console.log("Error: ", error.message);
-          if (error.name === "AbortError") {
-            console.log(
-              "Request was aborted. This is likely due to navigating away from the page before the request completed",
-            );
-          } else {
-            setError(error);
-            setLoading(false);
-          }
+          setError(error);
         } else {
           setError(new Error("An unknown error occurred"));
-          setLoading(false);
         }
+        setLoading(false);
       }
     };
 
-    void fetchBlogPosts();
-    return () => {
-      abortController.abort();
-    };
+    void fetchData();
   }, []);
-
-  console.log(posts);
 
   return (
     <BlogContext.Provider value={{ posts, loading, error }}>
