@@ -40,3 +40,6 @@ export default {
 ## Reconocimiento a los Recursos Empleados
 
 - 🎥 **[Carousel Hero Tutorial](https://www.youtube.com/watch?v=Kx8XlKRBZx8)**: Este recurso, proporcionado por _Web Dev Simplified_, fue adaptado para satisfacer las necesidades específicas de nuestro proyecto. ¡Echa un vistazo al tutorial para obtener una visión detallada de cómo se construyó nuestro carrusel!
+
+- 📷 **[Imagenes](https://unsplash.com)**: Gracias a la pagina web Unsplash se extrayeron las siguientes fotografias:
+  - 404 Error: [Image by storyset](https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm#query=404%20page%20found&position=3&from_view=keyword&track=ais&uuid=4d518585-71c1-43e5-b0b1-0b9753d3231b)

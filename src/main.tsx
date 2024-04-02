@@ -5,6 +5,7 @@ import "./index.css";
 import { LandingPage } from "./pages/LandingPage";
 import { BlogProvider } from "./context/BlogContext";
 import { BlogPage } from "./pages/BlogPage";
+import "./style/animations/AnimationScroll.css"
 
 const rootElement = document.getElementById("root");
 

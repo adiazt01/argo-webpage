@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Typography } from "../../components/Typography";
 import { BlogCard } from "../../components/cards/BlogCard";
 import { LayoutSection } from "../../layout/LayoutSection";
+/* import posts from "../../mock/blog.json" */
 import { BlogContext } from "../../context/BlogContext";
 
 export const OpenCallsAndNewsSection = () => {
@@ -17,7 +18,7 @@ export const OpenCallsAndNewsSection = () => {
       </header>
       <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {posts.slice(0, 3).map((blog) => (
-          <BlogCard key={blog.id} blog={blog} />
+          <BlogCard key={blog.url} blog={blog} />
         ))}
       </ul>
     </LayoutSection>

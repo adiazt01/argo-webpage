@@ -1,0 +1,71 @@
+.animation__fade-in {
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.animation__fade-in--left {
+  animation: fadeInLeft linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.animation__fade-in--right {
+  animation: fadeInRight linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.animation__fade-in--top {
+  animation: fadeInTop linear both;
+  animation-timeline: view();
+  animation-range: entry 70% cover 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

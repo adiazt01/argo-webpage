@@ -3,9 +3,10 @@ import { Typography } from "../../components/Typography";
 import { LayoutSection } from "../../layout/LayoutSection";
 
 export const AboutUsSection = () => {
+
   return (
     <LayoutSection id="about-us-section">
-      <header className="flex w-full flex-col gap-8 md:flex-row">
+      <header className="animation__fade-in--top flex w-full flex-col gap-8 md:flex-row">
         <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}
           <Typography className="text-left" variant="h2">
@@ -29,8 +30,8 @@ export const AboutUsSection = () => {
       {/* TODO add badge to the component */}
       {/* FIXME Change color typography because contrast */}
       {/* TODO  effecto hover */}
-      <ul className="grid w-full grid-cols-1 gap-4">
-        <article className="relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
+      <ul className="grid w-full grid-cols-1 gap-12">
+        <article className="animation__fade-in relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
           <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
             <Typography
               icon={<Star />}
@@ -56,8 +57,8 @@ export const AboutUsSection = () => {
             />
           </picture>
         </article>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <article className="flex min-h-48 flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-orange-600 to-yellow-600 to-25%">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+          <article className="animation__fade-in--left shadow-lg flex min-h-48 flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-orange-600 to-yellow-600 to-25%">
             <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
               <Typography
                 icon={<Star />}
@@ -84,7 +85,7 @@ export const AboutUsSection = () => {
               />
             </picture>
           </article>
-          <article className="flex min-h-48 flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-b from-emerald-600 to-green-900 to-25% shadow-xl">
+          <article className="animation__fade-in--right flex min-h-48 flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-b from-emerald-600 to-green-900 to-25% shadow-xl">
             <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
               <Typography
                 icon={<Star />}

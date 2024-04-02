@@ -41,8 +41,6 @@ export const Typography: React.FC<TypographyProps> = ({
       },
     });
 
-    console.log(Icon);
-
     return (
       <Component className={classStyle}>
         {iconPosition === "left" && Icon} {children}{" "}
