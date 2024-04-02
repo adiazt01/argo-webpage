@@ -12,7 +12,7 @@ const styles = {
   h1: "text-4xl font-bold",
   h2: "text-3xl font-medium text-blue-900",
   h3: "text-2xl font-medium",
-  h4: "text-xl font-medium",
+  h4: "text-xl font-medium leading-tight",
   h5: "text-lg font-medium",
   h6: "text-base font-bold",
   p: "text-base",

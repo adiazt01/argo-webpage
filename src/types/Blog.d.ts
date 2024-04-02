@@ -3,4 +3,6 @@ export interface Post {
     description: string;
     id: string;
     image: string;
+    urlToImage: string;
+    url: string;
 }
