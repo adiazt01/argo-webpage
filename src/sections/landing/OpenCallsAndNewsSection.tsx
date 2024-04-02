@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Typography } from "../components/Typography";
-import { BlogCard } from "../components/cards/BlogCard";
-import { LayoutSection } from "../layout/LayoutSection";
-import { BlogContext } from "../context/BlogContext";
+import { Typography } from "../../components/Typography";
+import { BlogCard } from "../../components/cards/BlogCard";
+import { LayoutSection } from "../../layout/LayoutSection";
+import { BlogContext } from "../../context/BlogContext";
 
 export const OpenCallsAndNewsSection = () => {
   const { posts } = useContext(BlogContext);

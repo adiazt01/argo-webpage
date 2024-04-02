@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { LandingPage } from "./pages/LandingPage";
-import {  BlogProvider } from "./context/BlogContext";
+import { BlogProvider } from "./context/BlogContext";
+import { BlogPage } from "./pages/BlogPage";
 
 const rootElement = document.getElementById("root");
 
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
+    element: <BlogPage />,
   },
 ]);
 

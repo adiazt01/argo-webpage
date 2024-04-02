@@ -1,5 +1,5 @@
-import { Typography } from "../components/Typography";
-import { MetricsCard } from "../components/cards/MetricsCard";
+import { Typography } from "../../components/Typography";
+import { MetricsCard } from "../../components/cards/MetricsCard";
 
 const MetricData = [
   {

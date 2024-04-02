@@ -1,6 +1,6 @@
 import { Link, Star } from "lucide-react";
-import { Typography } from "../components/Typography";
-import { LayoutSection } from "../layout/LayoutSection";
+import { Typography } from "../../components/Typography";
+import { LayoutSection } from "../../layout/LayoutSection";
 
 export const AboutUsSection = () => {
   return (

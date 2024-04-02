@@ -1,5 +1,5 @@
-import { HeroImageMd, HeroImageSm, HeroImageXl } from "../assets";
-import { Carousel } from "../components/carousel/Carousel";
+import { HeroImageMd, HeroImageSm, HeroImageXl } from "../../assets";
+import { Carousel } from "../../components/carousel/Carousel";
 
 const images = [
   {

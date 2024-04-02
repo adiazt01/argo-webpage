@@ -1,17 +1,15 @@
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
-import { AboutUsSection } from "../sections/AboutUsSection";
-import { HeroSection } from "../sections/HeroSection";
-import { JobOportunnietesSection } from "../sections/JobOportunnietesSection";
-import { MetricsSection } from "../sections/MetricsSection";
-import { OpenCallsAndNewsSection } from "../sections/OpenCallsAndNewsSection";
-import { SponsorsAndFundersSection } from "../sections/SponsorsAndFundersSection";
-import { SubscribeNewsletter } from "../sections/SubscribeNewsletter";
+import { LayoutPage } from "../layout/LayoutPage";
+import { AboutUsSection } from "../sections/landing/AboutUsSection";
+import { HeroSection } from "../sections/landing/HeroSection";
+import { JobOportunnietesSection } from "../sections/landing/JobOportunnietesSection";
+import { MetricsSection } from "../sections/landing/MetricsSection";
+import { OpenCallsAndNewsSection } from "../sections/landing/OpenCallsAndNewsSection";
+import { SponsorsAndFundersSection } from "../sections/landing/SponsorsAndFundersSection";
+import { SubscribeNewsletter } from "../sections/landing/SubscribeNewsletter";
 
 export const LandingPage = () => {
   return (
-    <>
-      <Navbar />
+    <LayoutPage>
       <HeroSection />
       <AboutUsSection />
       <OpenCallsAndNewsSection />
@@ -19,7 +17,6 @@ export const LandingPage = () => {
       <MetricsSection />
       <JobOportunnietesSection />
       <SubscribeNewsletter />
-      <Footer />
-    </>
+    </LayoutPage>
   );
 };

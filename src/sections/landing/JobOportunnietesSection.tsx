@@ -1,8 +1,8 @@
 import { Briefcase } from "lucide-react";
-import { Typography } from "../components/Typography";
-import { LayoutSection } from "../layout/LayoutSection";
-import jobs from "../mock/jobs.json";
-import { JobCard } from "../components/cards/JobCard";
+import { Typography } from "../../components/Typography";
+import { LayoutSection } from "../../layout/LayoutSection";
+import jobs from "../../mock/jobs.json";
+import { JobCard } from "../../components/cards/JobCard";
 
 export const JobOportunnietesSection = () => {
   return (

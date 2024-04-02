@@ -1,6 +1,6 @@
 import { Send } from "lucide-react";
-import { Typography } from "../components/Typography";
-import { Button } from "../components/button/Button";
+import { Typography } from "../../components/Typography";
+import { Button } from "../../components/button/Button";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface Inputs {
