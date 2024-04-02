@@ -8,7 +8,7 @@ export const SponsorsAndFundersSection = () => {
   return (
     <LayoutSection id="sponsors-and-funders-section">
       <header className="animation__fade-in--top flex w-full flex-col gap-8 md:flex-row">
-        <div className="anim flex max-w-lg flex-col gap-2">
+        <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}
           <Typography className="text-left" variant="h2">
             ¿Qué hacemos?
@@ -84,7 +84,7 @@ export const SponsorsAndFundersSection = () => {
             ))}
         </div>
       </div>
-      <div className="animation__fade-in--top mt-4 max-w-lg">
+      <div className="animation__fade-in--top mt-12 max-w-lg">
         <Typography className="text-left" variant="h2">
           Nuestro financiadores
         </Typography>

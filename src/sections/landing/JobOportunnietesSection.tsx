@@ -7,7 +7,7 @@ import { JobCard } from "../../components/cards/JobCard";
 export const JobOportunnietesSection = () => {
   return (
     <LayoutSection id="job-opportunities-section">
-      <header className="flex w-full flex-col gap-8 md:flex-row">
+      <header className="flex animation__fade-in--top w-full flex-col gap-8 md:flex-row">
         <div className="flex max-w-lg flex-col gap-2">
           {/* TODO Add text */}
           <Typography icon={<Briefcase />} className="text-left" variant="h2">
