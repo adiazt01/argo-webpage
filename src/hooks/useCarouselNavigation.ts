@@ -13,18 +13,24 @@ export const useCarouselNavigation = (images: image[]) => {
 
   const previousImage = useCallback(() => {
     setLoading(true);
-    setCurrentImage(
-      (currentImage) => (currentImage - 1 + images.length) % images.length,
-    );
+    setCurrentImage((currentImage) => (currentImage - 1 + images.length) % images.length);
   }, [images.length]);
 
   const setImage = useCallback((index: number) => {
+    setLoading(true);
     setCurrentImage((currentImage) => {
       if (index === currentImage) return currentImage;
-      setLoading(true);
       return index;
     });
   }, []);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = images[currentImage].imageWallpaper;
+    img.onload = () => {
+      setLoading(false);
+    };
+  }, [currentImage, images]);
 
   useEffect(() => {
     const timer = setInterval(() => {

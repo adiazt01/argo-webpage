@@ -20,8 +20,12 @@ export const Carousel = ({ images }: CarouselProps) => {
     <article
       className="relative max-h-[100vh] w-full overflow-hidden"
       aria-live="polite"
-      onMouseEnter={() => { setIsHovered(true); }}
-      onMouseLeave={() => { setIsHovered(false); }}
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+      }}
     >
       {images.length > 0 && (
         <CarouselImage image={images[currentImage]} loading={loading} />
