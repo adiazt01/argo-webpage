@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { Post } from "../types/Blog";
-import { fetchBlogPosts } from "../service/blogs";
+import { fetchBlogPosts } from "../services/blogs";
 
 interface BlogContextProps {
   posts: Post[];

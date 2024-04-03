@@ -1,11 +1,15 @@
-import { Car, Dog, PersonStanding, Send } from "lucide-react";
+/* eslint-disable @typescript-eslint/no-misused-promises */
+import { Send } from "lucide-react";
 import { Typography } from "../../components/Typography";
 import { Button } from "../../components/button/Button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { InputText } from "../../components/input/InputText";
+import { useEffect, useState } from "react";
+import { fetchCountry, getLocation } from "../../services/country";
 
 interface Inputs {
+  [key: string]: unknown;
   firstName: string;
   lastName: string;
   profession: string;
@@ -14,11 +18,59 @@ interface Inputs {
   country: string;
 }
 
-export const SubscribeNewsletter = () => {
-  const { register, handleSubmit } = useForm<Inputs>();
+interface country {
+  name: {
+    common: string;
+  };
+}
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await emailjs
+export const SubscribeNewsletter = () => {
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const [country, setCountry] = useState<country[]>([]);
+  const [error, setError] = useState<Error | null>(null);
+  const [userCountry, setUserCountry] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const getCountryData = async () => {
+      try {
+        const data = await fetchCountry();
+        setCountry(data);
+      } catch (error) {
+        if (error instanceof Error) {
+          setError(error);
+        } else {
+          setError(new Error("An unknown error occurred."));
+        }
+      }
+    };
+
+    const fetchLocation = async () => {
+      try {
+        const location = await getLocation();
+        setValue("country", location);
+      } catch (error) {
+        if (error instanceof Error) {
+          setError(error);
+        } else {
+          setError(new Error("An unknown error occurred."));
+        }
+      }
+    };
+
+    void fetchLocation();
+
+    void getCountryData();
+  }, []);
+
+  console.log(country);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    emailjs
       .send("service_kju7a6p", "template_qmy4wmf", data, {
         publicKey: "xibh2DYXOBN7CmSwC",
       })
@@ -44,43 +96,79 @@ export const SubscribeNewsletter = () => {
           </Typography>
         </header>
         <form
-          className="mt-8 flex w-full flex-col gap-8"
+          className="mt-8 flex max-w-4xl flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
           action="mailto:armandodt2004@gmail.com"
         >
           {/* FIXME Improve the input fields */}
           {/* TODO captcha */}
-          <div className="flex flex-col gap-8 md:flex-row">
-            <InputText
-              name="firstName"
-              placeholder="Luis"
-              register={register}
-            />
-            <InputText
-              name="lastName"
-              placeholder="Perez"
-              register={register}
-            />
+          <div className="flex flex-col justify-between gap-4 md:flex-row">
+            <div>
+              <InputText
+                label="Nombre"
+                name="firstName"
+                placeholder="Luis"
+                register={register}
+              />
+              {errors.firstName && (
+                <div className="mt-2 text-red-500">El nombre es requerido</div>
+              )}
+            </div>
+            <div>
+              <InputText
+                label="Apellido"
+                name="lastName"
+                placeholder="Perez"
+                register={register}
+              />
+              {errors.lastName && (
+                <div className="mt-2 text-red-500">
+                  El apellido es requerido
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col gap-8 md:flex-row">
-            <InputText
-              name="profession"
-              placeholder="Desarrollador"
-              register={register}
-            />
-            <InputText
-              name="company"
-              placeholder="Google"
-              register={register}
-            />
+          <div className="flex flex-col justify-between gap-8 md:flex-row">
+            <div>
+              <InputText
+                label="Profesion"
+                name="profession"
+                placeholder="Desarrollador"
+                register={register}
+              />
+              {errors.profession && (
+                <div className="mt-2 text-red-500">
+                  La profesion es requerida
+                </div>
+              )}
+            </div>
+            <div>
+              <InputText
+                label="Compañia"
+                name="company"
+                placeholder="Google"
+                register={register}
+              />
+              {errors.company && (
+                <div className="mt-2 text-red-500">
+                  La compañia es requerida
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex flex-col gap-8 md:flex-row">
-            <InputText
-              type="email"
-              name="email"
-              placeholder="example@email.com"
-              register={register}
-            />
+          <div className="flex flex-col justify-between gap-8 md:flex-row">
+            <div>
+              <InputText
+                label="Correo"
+                type="email"
+                name="email"
+                placeholder="example@email.com"
+                register={register}
+              />
+              {errors.email && (
+                <div className="mt-2 text-red-500">El correo es requerido</div>
+              )}
+            </div>
             <div className="relative flex flex-col gap-2">
               <label
                 htmlFor="pet-select"
@@ -88,28 +176,39 @@ export const SubscribeNewsletter = () => {
               >
                 Pais
               </label>
-              <select
-                id="pet-select"
-                className="rounded-md w-full border-2 border-white/15 bg-neutral-800 px-6 py-2 text-lg text-white shadow-md outline-none transition-all duration-200 hover:bg-neutral-700/80  focus:border-green-500/50"
-                {...register("country")}
-              >
-                <option value="">--Escoge una opcion--</option>
-                <option value="Venezuela">Venezuela</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Mexico">Mexico</option>
-                <option value="United States">United States</option>
-                <option value="Canada">Canada</option>
-              </select>
+              <div>
+                <select
+                  id="pet-select"
+                  className="text-md w-96 max-w-96 rounded-md border-2 border-white/15 bg-neutral-700/80 py-1.5 pe-6 ps-2 text-white shadow-md outline-none transition-all duration-200  focus:border-green-500/50"
+                  {...register("country", { required: true })}
+                >
+                  {country
+                    .sort((a, b) => a.name.common.localeCompare(b.name.common))
+                    .map((country) => (
+                      <option
+                        key={country.name.common}
+                        value={country.name.common}
+                      >
+                        {country.name.common}
+                      </option>
+                    ))}
+                </select>
+                {errors.country && (
+                  <div className="mt-2 text-red-500">El pais es requerido</div>
+                )}
+              </div>
             </div>
           </div>
-          <Button
-            icon={<Send />}
-            iconPosition="right"
-            size="medium"
-            variant="primary"
-          >
-            Subscribe
-          </Button>
+          <div className="mx-auto mt-4">
+            <Button
+              icon={<Send />}
+              iconPosition="right"
+              size="large"
+              variant="primary"
+            >
+              Subscribe
+            </Button>
+          </div>
         </form>
       </div>
     </section>
