@@ -25,7 +25,7 @@ const styles = {
   link: {
     primary: "text-rose-600 hover:text-rose-700 transition-all",
     secondary: "text-gray-500 hover:text-gray-700",
-    gray: "text-gray-500 hover:text-red-700 transition-all",
+    gray: "text-gray-700 hover:text-red-700 transition-all",
   },
   size: {
     link: "",

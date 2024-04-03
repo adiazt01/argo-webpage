@@ -20,7 +20,11 @@ const images = [
 
 export const HeroSection = () => {
   return (
-    <main id="hero-section" data-testid="hero-section" className="flex w-full flex-col">
+    <main
+      id="hero-section"
+      data-testid="hero-section"
+      className="flex w-full flex-col"
+    >
       <Carousel images={images}></Carousel>
     </main>
   );
