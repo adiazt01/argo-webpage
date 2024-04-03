@@ -8,7 +8,8 @@ import { SponsorsAndFundersSection } from "../sections/landing/SponsorsAndFunder
 import { SubscribeNewsletter } from "../sections/landing/SubscribeNewsletter";
 
 export const LandingPage = () => {
-  window.scrollTo(0, 0)
+  // Scroll to top of the page
+  window.scrollTo(0, 0);
 
   return (
     <LayoutPage>
