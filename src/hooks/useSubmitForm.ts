@@ -15,12 +15,20 @@ export const useSubmitForm = () => {
     }
   };
 
+  /* FIXME add synchronous to the section where the message is displayed */
+
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setMessage({ value: "", type: "" });
-    }, 5000);
+    let timer: NodeJS.Timeout;
+    if (
+      message.value === "Email sent successfully!" ||
+      message.value === "An error occurred."
+    ) {
+      timer = setTimeout(() => {
+        setMessage({ value: "", type: "" });
+      }, 5000);
+    }
     return () => {
-      clearTimeout(timeout);
+      clearTimeout(timer);
     };
   }, [message]);
 
