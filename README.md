@@ -64,17 +64,18 @@ Proyecto de desarrollo de una pagina web para la empresa Agora2030 con el fin de
 - 👟 **Optimización**: Se comprimieron y convirtieron la mayoría de las imágenes al formato `webp` permitiendo mayor rendimiento y menos uso de recursos para el uso de estas. Ademas de mejorar la accesibilidad de las etiquetas `HTML`.
 - 🧪 **Test de integración y unitarios** : Se realizaron pruebas unitarias y de integración para garantizar el correcto funcionamiento de la aplicación. Garantizando la fiabilidad del código. La pagina de la landing posee tanto test de integración como unitarios.
 
-## Reconocimiento a los Recursos Empleados
+## 👥 Reconocimiento a los Recursos Empleados
 
-- 🎥 **[Carousel Hero Tutorial](https://www.youtube.com/watch?v=Kx8XlKRBZx8)**: Este recurso, proporcionado por _Web Dev Simplified_, fue adaptado para satisfacer las necesidades específicas de nuestro proyecto. ¡Echa un vistazo al tutorial para obtener una visión detallada de cómo se construyó nuestro carrusel!
+- 🌐 **[API REST](https://newsdata.io/)**: La API que se uso para la solicitud de los articulos fue obtenido de News Data.
 
 - 📷 **[Imágenes](https://unsplash.com)**: Gracias a la pagina web Unsplash y Freepik se extrayeron las siguientes fotografias:
-  - 404 Error: [Imagen de storyset](https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm#query=404%20page%20found&position=3&from_view=keyword&track=ais&uuid=4d518585-71c1-43e5-b0b1-0b9753d3231b)
-  - [Imagen de tonodiaz en Freepik](https://www.freepik.es/foto-gratis/tengo-negocio-crecimiento-retrato-bella-empresaria-sonriendo-haciendo-contacto-visual-mientras-prepara-paquetes-listos-enviar-clientes_27999290.htm#query=emprendedor&position=2&from_view=keyword&track=sph&uuid=12bbbd49-7d3a-4382-9277-f10154892fce)
+  - **🖼 [Imagen 404 de storyset](https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm#query=404%20page%20found&position=3&from_view=keyword&track=ais&uuid=4d518585-71c1-43e5-b0b1-0b9753d3231b)**
 
-  - [Imagen de tirachardz en Freepik](https://www.freepik.es/foto-gratis/hombres-negocios-asiaticos-mujeres-negocios-que-reunen-intercambiar-ideas-sobre-aplicacion-planificacion-diseno-web-creativo-desarrollar-diseno-plantilla-proyectos-telefonos-moviles-que-trabajan-juntos-oficina-pequena_10075056.htm#fromView=search&page=1&position=30&uuid=2e8d5629-c8df-4c74-883c-a55e22e7e40f)
+  - **🖼[Imagen de tonodiaz en Freepik](https://www.freepik.es/foto-gratis/tengo-negocio-crecimiento-retrato-bella-empresaria-sonriendo-haciendo-contacto-visual-mientras-prepara-paquetes-listos-enviar-clientes_27999290.htm#query=emprendedor&position=2&from_view=keyword&track=sph&uuid=12bbbd49-7d3a-4382-9277-f10154892fce)**
 
-  - [Imagen de freepik](https://www.freepik.es/foto-gratis/mujer-segura-invernadero_1957110.htm#fromView=search&page=1&position=1&uuid=90631e0c-506c-4cc1-8b24-75745a6909dd)
+  - **🖼 [Imagen de tirachardz en Freepik](https://www.freepik.es/foto-gratis/hombres-negocios-asiaticos-mujeres-negocios-que-reunen-intercambiar-ideas-sobre-aplicacion-planificacion-diseno-web-creativo-desarrollar-diseno-plantilla-proyectos-telefonos-moviles-que-trabajan-juntos-oficina-pequena_10075056.htm#fromView=search&page=1&position=30&uuid=2e8d5629-c8df-4c74-883c-a55e22e7e40f)**
+
+  - **🖼 [Imagen de freepik](https://www.freepik.es/foto-gratis/mujer-segura-invernadero_1957110.htm#fromView=search&page=1&position=1&uuid=90631e0c-506c-4cc1-8b24-75745a6909dd)**
 
 ## 👩‍💻 Enlaces para mas informacion de la prueba
 
