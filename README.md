@@ -62,8 +62,7 @@ Proyecto de desarrollo de una pagina web para la empresa Agora2030 con el fin de
 - 🎨 **Animaciones sutiles**: Se han añadido animaciones sutiles a lo largo de la página para mejorar la experiencia de usuario.
 - 👓 **Accesibilidad**: Se ajustaron algunos contrastes del sitio web permitiendo mayor legibilidad y fluidez en el. Sin embargo la opción de estilos para cada caso no pudo ser agregada a tiempo.
 - 👟 **Optimización**: Se comprimieron y convirtieron la mayoría de las imágenes al formato `webp` permitiendo mayor rendimiento y menos uso de recursos para el uso de estas. Ademas de mejorar la accesibilidad de las etiquetas `HTML`.
-- 🧪 **Test de integración y unitarios** : Se realizaron pruebas unitarias y de integración para garantizar el correcto funcionamiento de la aplicación. Garantizando la fiabilidad del código.
-
+- 🧪 **Test de integración y unitarios** : Se realizaron pruebas unitarias y de integración para garantizar el correcto funcionamiento de la aplicación. Garantizando la fiabilidad del código. La pagina de la landing posee tanto test de integración como unitarios.
 
 ## Reconocimiento a los Recursos Empleados
 
