@@ -8,8 +8,8 @@ describe("BlogCard", () => {
   const blog = {
     title: "Test Blog",
     description: "This is a test blog",
-    urlToImage: "https://example.com/image.jpg",
-    url: "/blog/1",
+    urlToImage: "https://test.com/image.jpg",
+    url: "/test-blog",
     id: "1",
   };
 
@@ -22,8 +22,8 @@ describe("BlogCard", () => {
 
     expect(screen.getByText("This is a test blog")).toBeInTheDocument();
     expect(screen.getByText("Test Blog")).toBeInTheDocument();
-    expect(screen.getByText("Ver mas")).toBeInTheDocument();
-    expect(screen.getByAltText("image of Test Blog")).toBeInTheDocument();
+    expect(screen.getByText("Continuar leyendo")).toBeInTheDocument();
+    expect(screen.getByAltText("Imagen de Test Blog")).toBeInTheDocument();
   });
 
   it("truncates the description if it's longer than 125 characters", () => {

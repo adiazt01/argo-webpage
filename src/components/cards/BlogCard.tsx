@@ -12,7 +12,7 @@ export const BlogCard = ({ blog }: { blog: Post }) => {
       {urlToImage && (
         <img
           src={urlToImage}
-          alt={title}
+          alt={`Imagen de ${title}`}
           className="h-56 w-full object-cover"
         />
       )}
