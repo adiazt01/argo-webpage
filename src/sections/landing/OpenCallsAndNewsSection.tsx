@@ -17,7 +17,7 @@ export const OpenCallsAndNewsSection = () => {
         </div>
       </header>
       <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {posts.slice(0, 3).map((blog) => (
+        {posts && posts.slice(0, 3).map((blog) => (
           <BlogCard key={blog.url} blog={blog} />
         ))}
       </ul>
