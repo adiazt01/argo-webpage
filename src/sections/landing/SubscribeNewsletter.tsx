@@ -48,7 +48,6 @@ export const SubscribeNewsletter = () => {
         <form
           className="mt-12 flex max-w-4xl flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
-          action="mailto:armandodt2004@gmail.com"
         >
           <div className="flex flex-col mx-auto lg:mx-0 justify-between gap-4 md:flex-row">
             <div>
