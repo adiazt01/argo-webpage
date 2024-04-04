@@ -3,13 +3,13 @@ import { Typography } from "../../components/Typography";
 import { Button } from "../../components/button/Button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { InputText } from "../../components/input/InputText";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchCountry, getLocation } from "../../services/country";
 import { useFetch } from "../../hooks/useFetch";
 import { FetchResponse } from "../../types/useFetch";
 import { Ban, CheckCircle, LoaderCircle, Send } from "lucide-react";
 import { Inputs, country } from "../../types/FormSubscribe";
-import { sendEmail } from "../../services/email";
+import { useSubmitForm } from "../../hooks/useSubmitForm";
 
 export const SubscribeNewsletter = () => {
   const {
@@ -20,14 +20,10 @@ export const SubscribeNewsletter = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
-  const [success, setSuccess] = useState(false);
-
   const { data: dataCountry }: FetchResponse<country[]> =
     useFetch(fetchCountry);
-
   const { data: dataLocation } = useFetch(getLocation);
+  const { submitForm, message } = useSubmitForm();
 
   useEffect(() => {
     if (dataLocation) {
@@ -35,46 +31,23 @@ export const SubscribeNewsletter = () => {
     }
   }, [setValue, dataLocation]);
 
-  useEffect(() => {
-    if (success) {
-      const timer = setTimeout(() => {
-        setSuccess(false);
-      }, 5000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [success]);
-
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    setSubmitting(true);
-    try {
-      const result = await sendEmail(data);
-      console.log(result);
-      setSuccess(true);
-      reset();
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error);
-      } else {
-        setError(new Error("An unknown error occurred."));
-      }
-    }
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    void submitForm(data);
+    reset();
   };
-
   return (
     <section
       data-testid="subscribe-newsletter"
       className="full flex min-h-96 flex-col items-center justify-center bg-neutral-800 px-8 py-24"
     >
       <div className="w-full max-w-4xl">
-        <header className="flex flex-col items-center justify-center gap-4">
-          <Typography variant="h2" className="text-white">
+        <header className="flex flex-col items-center justify-center gap-4 text-center md:text-left">
+          <Typography variant="h2" className="w-full text-white">
             Suscribete a nuestro boletin informativo
           </Typography>
         </header>
         <form
-          className="mt-8 flex max-w-4xl flex-col gap-8"
+          className="mt-12 flex max-w-4xl flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
           action="mailto:armandodt2004@gmail.com"
         >
@@ -178,7 +151,7 @@ export const SubscribeNewsletter = () => {
           <div className="mx-auto mt-4 md:mx-0 md:me-auto">
             <Button iconPosition="right" size="medium" variant="primary">
               Suscribirse
-              {submitting ? (
+              {message.value ? (
                 <LoaderCircle
                   className="animate-spin"
                   style={{
@@ -199,7 +172,7 @@ export const SubscribeNewsletter = () => {
                 />
               )}
             </Button>
-            {error && (
+            {message.type === "error" && (
               <div className="mt-8 rounded-2xl border-2 border-red-700 bg-red-900/50 px-4 py-1.5 text-neutral-100">
                 <Ban
                   className="inline-block"
@@ -207,12 +180,10 @@ export const SubscribeNewsletter = () => {
                     color: "currentColor",
                   }}
                 />
-                <span className="ms-4 inline-block">
-                  Ha ocurrido un error al enviar el correo
-                </span>
+                <span className="ms-4 inline-block">{message.value}</span>
               </div>
             )}
-            {success && (
+            {message.type === "success" && (
               <div className="mt-8 rounded-2xl border-2 border-green-700 bg-green-900/50 px-4 py-1.5 text-neutral-100">
                 <CheckCircle
                   className="inline-block"
@@ -220,9 +191,7 @@ export const SubscribeNewsletter = () => {
                     color: "currentColor",
                   }}
                 />
-                <span className="ms-4 inline-block">
-                  Correo enviado exitosamente
-                </span>
+                <span className="ms-4 inline-block">{message.value}</span>
               </div>
             )}
           </div>
