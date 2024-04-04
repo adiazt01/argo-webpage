@@ -1,4 +1,3 @@
-import { Fragment } from "react/jsx-runtime";
 import { LayoutSection } from "../../layout/LayoutSection";
 import { Typography } from "../../components/Typography";
 import { Link } from "lucide-react";
@@ -59,41 +58,6 @@ const sponsors = [
   },
 ];
 
-const funders = [
-  {
-    name: "Funder 1",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 2",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 3",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 4",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 5",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 6",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 7",
-    logo: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Funder 8",
-    logo: "https://via.placeholder.com/150",
-  },
-];
-
 export const SponsorsAndFundersSection = () => {
   return (
     <LayoutSection id="sponsors-and-funders-section">
@@ -119,12 +83,10 @@ export const SponsorsAndFundersSection = () => {
           </a>
         </div>
       </header>
-      {/* Logos */}
       <div className="animation__fade-in relative mx-auto flex w-full max-w-3xl flex-row flex-nowrap overflow-hidden">
         <div className="absolute bottom-0 left-0 top-0 z-20 h-full w-12 bg-gradient-to-r from-white to-transparent"></div>
         <div className="absolute bottom-0 right-0 top-0 z-20 h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
-        <div className="slide-left relative z-10 flex flex-row gap-24 whitespace-nowrap">
-
+        <div className="slide-left relative z-10 flex flex-row gap-24 whitespace-nowrap scale-110">
           {sponsors.map((sponsor, index) => (
             <img
               key={index}
@@ -157,55 +119,25 @@ export const SponsorsAndFundersSection = () => {
       <div className="animation__fade-in relative mx-auto flex w-full max-w-3xl flex-row flex-nowrap overflow-hidden">
         <div className="absolute bottom-0 left-0 top-0 z-20 h-full w-12 bg-gradient-to-r from-white to-transparent"></div>
         <div className="absolute bottom-0 right-0 top-0 z-20 h-full w-12 bg-gradient-to-l from-white to-transparent"></div>
-        <div className="slide-right relative z-10 flex flex-row gap-24 whitespace-nowrap">
-          {Array(2)
-            .fill(
-              <>
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-                <img
-                  src="https://via.placeholder.com/150"
-                  className=" inline-block h-32 w-32"
-                  alt="Sponsor 2"
-                />
-              </>,
-            )
-            .map((elements, index) => (
-              <Fragment key={index}>{elements}</Fragment>
-            ))}
+        <div className="slide-right relative z-10 flex flex-row gap-24 whitespace-nowrap scale-110">
+          {sponsors.map((sponsor, index) => (
+            <img
+              key={index}
+              src={sponsor.logo}
+              className="inline-block h-32 w-32 object-contain"
+              loading="lazy"
+              alt={sponsor.name}
+            />
+          ))}
+          {sponsors.map((sponsor, index) => (
+            <img
+              key={index}
+              src={sponsor.logo}
+              className="inline-block h-32 w-32 object-contain"
+              loading="lazy"
+              alt={sponsor.name}
+            />
+          ))}
         </div>
       </div>
     </LayoutSection>

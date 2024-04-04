@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
 import { Briefcase } from "lucide-react";
 import { Typography } from "../../components/Typography";
 import { LayoutSection } from "../../layout/LayoutSection";
@@ -5,6 +6,7 @@ import jobs from "../../mock/jobs.json";
 import { JobCard } from "../../components/cards/JobCard";
 
 export const JobOportunnietesSection = () => {
+
   return (
     <LayoutSection id="job-opportunities-section">
       <header className="flex animation__fade-in--top w-full flex-col gap-8 md:flex-row">

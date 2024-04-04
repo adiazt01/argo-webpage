@@ -1,7 +1,7 @@
 # 🌎 Proyecto Agora 2030
 
 Proyecto de desarrollo de una pagina web para la empresa Agora2030 con el fin de mejorar la experiencia de usuario y la presentación de la empresa.
-
+<!-- FIXME add web page project -->
 Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts.vercel.app/)
 
 ![alt text](webpage.png)
@@ -66,6 +66,9 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
 - 👟 **Optimización**: Se comprimieron y convirtieron la mayoría de las imágenes al formato `webp` permitiendo mayor rendimiento y menos uso de recursos para el uso de estas. Ademas de mejorar la accesibilidad de las etiquetas `HTML`.
 - 🧪 **Test de integración y unitarios** : Se realizaron pruebas unitarias y de integración para garantizar el correcto funcionamiento de la aplicación. Garantizando la fiabilidad del código. La pagina de la landing posee tanto test de integración como unitarios.
 
+## 🚀 Sugerencias de mejoras
+
+
 ## 👥 Reconocimiento a los Recursos Empleados
 
 - 🌐 **[API REST](https://newsdata.io/)**: La API que se uso para la solicitud de los articulos fue obtenido de News Data.
@@ -78,6 +81,12 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
   - **🖼 [Imagen de tirachardz en Freepik](https://www.freepik.es/foto-gratis/hombres-negocios-asiaticos-mujeres-negocios-que-reunen-intercambiar-ideas-sobre-aplicacion-planificacion-diseno-web-creativo-desarrollar-diseno-plantilla-proyectos-telefonos-moviles-que-trabajan-juntos-oficina-pequena_10075056.htm#fromView=search&page=1&position=30&uuid=2e8d5629-c8df-4c74-883c-a55e22e7e40f)**
 
   - **🖼 [Imagen de freepik](https://www.freepik.es/foto-gratis/mujer-segura-invernadero_1957110.htm#fromView=search&page=1&position=1&uuid=90631e0c-506c-4cc1-8b24-75745a6909dd)**
+
+- 🎨 **[Iconos](https://lucide.netlify.app/)**: Los iconos que se usaron en la pagina web fueron obtenidos de Lucide Icons.
+
+- 🎨 **[Fuentes](https://fonts.google.com/)**: Las fuentes que se usaron en la pagina web fueron obtenidas de Google Fonts.
+
+- 🎁 **[Logos](https://agora2030.org/)**: Los iconos fueron extraídos desde la propia web principal de [Agora2030](https://agora2030.org/)
 
 ## 👩‍💻 Enlaces para mas informacion de la prueba
 
