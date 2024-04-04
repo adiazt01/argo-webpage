@@ -20,7 +20,7 @@ export const JobOportunnietesSection = () => {
         </div>
       </header>
       <ul className="flex w-full flex-col gap-8 lg:flex-row">
-        {jobs.slice(0, 3).map((job) => (
+        {jobs && jobs.slice(0, 3).map((job) => (
           <li key={job.id}>
             <JobCard job={job} />
           </li>
