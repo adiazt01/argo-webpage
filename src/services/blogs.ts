@@ -1,12 +1,12 @@
-import { Post } from "../types/Blog";
+import { PostApi } from "../types/Blog";
 
 interface ApiResponse {
-  articles: Post[];
+  articles: PostApi[];
 }
 
 export async function fetchBlogPosts() {
   const response = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=20f85a29721942639eee179c911e8adb",
+    import.meta.env.VITE_API_NEWS as string,
   );
 
   const data = (await response.json()) as ApiResponse;

@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { Post } from "../types/Blog";
 import { fetchBlogPosts } from "../services/blogs";
+import { adaptPost } from "../helpers/postUtils";
 
 interface BlogContextProps {
   posts: Post[];
@@ -22,9 +23,11 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const posts = await fetchBlogPosts();
-        setPosts(posts);
+        const apiPosts = await fetchBlogPosts();
+        console.log(apiPosts);
+        const posts:Post[] = apiPosts.map(adaptPost);
         console.log(posts);
+        setPosts(posts);
         setLoading(false);
       } catch (error) {
         if (error instanceof Error) {

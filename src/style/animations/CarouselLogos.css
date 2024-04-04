@@ -1,17 +1,12 @@
-:root {
-  --duration: 1;
-}
-
 .slide-left {
   animation: slide infinite linear;
-  animation-duration: calc(20s * var(--duration));
+  animation-duration: calc(10s)
 }
 
 .slide-right {
   animation: slide infinite linear;
   animation-direction: reverse;
-  animation-duration: calc(20s * var(--duration));
-
+  animation-duration: calc(10s)
 }
 
 .slide:hover {
@@ -24,13 +19,17 @@
   }
 
   to {
-    transform: translateX(calc(-100% - 22rem));
+    transform: translateX(calc(-100% - 26rem));
   }
 }
 
 @media (min-width: 768px) {
-  .slide {
-    animation-duration: calc(10s * var(--duration));
+  .slide-left {
+    animation-duration: calc(25s);
+  }
+
+  .slide-right {
+    animation-duration: calc(25s);
   }
 }
 
