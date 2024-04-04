@@ -7,6 +7,8 @@ import emailjs from "@emailjs/browser";
 import { InputText } from "../../components/input/InputText";
 import { useEffect, useState } from "react";
 import { fetchCountry, getLocation } from "../../services/country";
+import { useFetch } from "../../hooks/useFetch";
+import { FetchResponse } from "../../types/useFetch";
 
 interface Inputs {
   [key: string]: unknown;
@@ -31,43 +33,25 @@ export const SubscribeNewsletter = () => {
     setValue,
     formState: { errors },
   } = useForm<Inputs>();
-  const [country, setCountry] = useState<country[]>([]);
-  const [error, setError] = useState<Error | null>(null);
-  const [userCountry, setUserCountry] = useState<string | undefined>(undefined);
+
+  const {
+    data: dataCountry,
+    error: errorCountry,
+    loading: loadingCountry,
+  }: FetchResponse<country[]> = useFetch(fetchCountry);
+
+  const {
+    data: dataLocation,
+    error: errorLocation,
+    loading: loadingLocation,
+  } = useFetch(getLocation);
 
   useEffect(() => {
-    const getCountryData = async () => {
-      try {
-        const data = await fetchCountry();
-        setCountry(data);
-      } catch (error) {
-        if (error instanceof Error) {
-          setError(error);
-        } else {
-          setError(new Error("An unknown error occurred."));
-        }
-      }
-    };
+    if (dataLocation) {
+      setValue("country", dataLocation);
+    }
+  }, [setValue, dataLocation]);
 
-    const fetchLocation = async () => {
-      try {
-        const location = await getLocation();
-        setValue("country", location);
-      } catch (error) {
-        if (error instanceof Error) {
-          setError(error);
-        } else {
-          setError(new Error("An unknown error occurred."));
-        }
-      }
-    };
-
-    void fetchLocation();
-
-    void getCountryData();
-  }, []);
-
-  console.log(country);
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     emailjs
@@ -182,8 +166,8 @@ export const SubscribeNewsletter = () => {
                   className="text-md w-96 max-w-96 rounded-md border-2 border-white/15 bg-neutral-700/80 py-1.5 pe-6 ps-2 text-white shadow-md outline-none transition-all duration-200  focus:border-green-500/50"
                   {...register("country", { required: true })}
                 >
-                  {country
-                    .sort((a, b) => a.name.common.localeCompare(b.name.common))
+                  {dataCountry
+                    ?.sort((a, b) => a.name.common.localeCompare(b.name.common))
                     .map((country) => (
                       <option
                         key={country.name.common}
