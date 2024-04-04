@@ -7,8 +7,11 @@ export { default as HeroImageXl } from "./hero/banner_web_xl.webp";
 export { default as HeroImageMd } from "./hero/banner_web_md.webp";
 export { default as HeroImageSm } from "./hero/banner_web_sm.webp";
 
-// Bacground images and patterns
+// Bacground images
 export { default as ImageNotFound } from "./backgrounds/404NotFound.webp";
+export {default as womenEnterprise} from "./backgrounds/enterprise.webp"
+export {default as planEnterpise} from "./backgrounds/plan.webp"
+export {default as  womanGreenHouse} from "./backgrounds/women_green_house.webp"
 
 // Export logos for sponsors
 export { default as cenpromypeLogo } from "./logo/sponsors/cenpromype_logo.webp"

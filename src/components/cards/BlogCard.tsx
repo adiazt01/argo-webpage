@@ -3,6 +3,7 @@ import { Link } from "../link/Link";
 import { Typography } from "../Typography";
 import { Post } from "../../types/Blog";
 import { ImageNotFound } from "../../assets";
+import { Badge } from "../badge/Badge";
 
 export const BlogCard = ({ blog }: { blog: Post }) => {
   const { title, description, urlToImage, url, tags } = blog;
@@ -24,16 +25,13 @@ export const BlogCard = ({ blog }: { blog: Post }) => {
         />
       )}
       <div className="flex min-h-56 flex-col justify-start gap-2 p-4">
-        <ul className="absolute left-4 top-4 flex flex-row gap-2">
+        <div className="absolute left-4 top-4 flex flex-row flex-wrap gap-2">
           {tags.map((tag) => (
-            <li
-              key={crypto.randomUUID()}
-              className="rounded-2xl border bg-rose-300 px-2 py-1 font-medium text-neutral-700"
-            >
-              <p className="text-xs">{tag}</p>
-            </li>
+            <Badge key={crypto.randomUUID()} color="rose">
+              {tag}
+            </Badge>
           ))}
-        </ul>
+        </div>
 
         <Typography variant="h4">
           {title && title.length > 50 ? `${title.slice(0, 50)}...` : title}

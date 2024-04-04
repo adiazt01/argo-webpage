@@ -1,13 +1,21 @@
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  color: "rose" | "pink" | "blue" | "green" | "yellow";
+  color: "rose" | "green" | "yellow" | "orange";
   children: React.ReactNode;
 }
 
 export const Badge: React.FC<BadgeProps> = ({ children, color, ...rest }) => {
-  const styles = `mb-auto w-auto flex flex-row items-center gap-2 rounded-2xl border-2 border-rose-300 bg-gradient-to-br from-transparent to-${color}-300/50 px-3 py-0.5 text-xs text-neutral-100`;
+  const colorClasses = {
+    rose: "border-rose-400/50 bg-rose-600",
+    green: "border-green-400/50 bg-green-600",
+    yellow: "border-yellow-400/50 bg-yellow-600",
+    orange: "border-orange-400/50 bg-orange-600",
+  };
+
+  const styles = `inline-block flex flex-row flex-nowrap items-center gap-2 rounded-2xl ${colorClasses[color]} px-3 py-0.5 text-xs text-neutral-100 border-2 font-medium shadow`;
+
   return (
-    <div  {...rest} className={styles}>
-    {children}
-  </div>
+    <div className={styles} {...rest}>
+      {children}
+    </div>
   );
 };
