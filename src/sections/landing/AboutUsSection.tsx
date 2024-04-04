@@ -1,9 +1,8 @@
-import { Link, Star } from "lucide-react";
+import { Building, Link, Star } from "lucide-react";
 import { Typography } from "../../components/Typography";
 import { LayoutSection } from "../../layout/LayoutSection";
 
 export const AboutUsSection = () => {
-
   return (
     <LayoutSection id="about-us-section">
       <header className="animation__fade-in--top flex w-full flex-col gap-8 md:flex-row">
@@ -33,19 +32,29 @@ export const AboutUsSection = () => {
       <ul className="grid w-full grid-cols-1 gap-12">
         <article className="animation__fade-in relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
           <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
-            <Typography
-              icon={<Star />}
-              className="text-left text-neutral-300"
-              variant="h3"
-            >
-              Ecosistema
-            </Typography>
-            <Typography className="text-left text-neutral-300" variant="p">
-              Contribuimos al fortalecimiento del ecosistema de emprendedores y
-              pequeñas empresas en crecimiento a través de eventos, tales como
-              el programa Formando Catalizadores, y el co-liderazgo de la Red de
-              Impacto, integrada por más de 100 organizaciones de la región.
-            </Typography>
+            <div className="mb-2 me-auto flex flex-row items-center gap-2 rounded-2xl border-2 border-rose-300 bg-gradient-to-br from-transparent to-rose-300/50 px-3 py-0.5 text-left text-xs text-neutral-100">
+              <Building
+                style={{
+                  width: "1.5em",
+                  height: "1.5em",
+                  stroke: "currentColor",
+                  strokeWidth: "2",
+                }}
+              />
+              <span>Crecimiento sostenible</span>
+            </div>
+            <div className="px-2">
+              <Typography className="text-left text-white" variant="h3">
+                Ecosistema
+              </Typography>
+              <Typography className="text-left text-neutral-100" variant="p">
+                Contribuimos al fortalecimiento del ecosistema de emprendedores
+                y pequeñas empresas en crecimiento a través de eventos, tales
+                como el programa Formando Catalizadores, y el co-liderazgo de la
+                Red de Impacto, integrada por más de 100 organizaciones de la
+                región.
+              </Typography>
+            </div>
           </div>
           <picture className="relative w-full">
             <div className="absolute inset-0 bg-gradient-to-b from-rose-800  from-5% via-transparent via-20% to-transparent to-90% md:bg-gradient-to-r"></div>
@@ -58,7 +67,7 @@ export const AboutUsSection = () => {
           </picture>
         </article>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <article className="animation__fade-in--left shadow-lg flex min-h-48 flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-orange-600 to-yellow-600 to-25%">
+          <article className="animation__fade-in--left flex min-h-48 flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-orange-600 to-yellow-600 to-25% shadow-lg">
             <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
               <Typography
                 icon={<Star />}

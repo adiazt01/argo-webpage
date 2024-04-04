@@ -24,6 +24,7 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
       try {
         const posts = await fetchBlogPosts();
         setPosts(posts);
+        console.log(posts);
         setLoading(false);
       } catch (error) {
         if (error instanceof Error) {

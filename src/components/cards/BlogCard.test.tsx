@@ -6,10 +6,11 @@ import { MemoryRouter } from "react-router-dom";
 
 describe("BlogCard", () => {
   const blog = {
-    id: "1",
     title: "Test Blog",
     description: "This is a test blog",
-    image: "test-image.jpg",
+    urlToImage: "https://example.com/image.jpg",
+    url: "/blog/1",
+    id: "1",
   };
 
   it("renders the blog content", () => {
