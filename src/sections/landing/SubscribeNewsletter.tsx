@@ -1,50 +1,33 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { Send } from "lucide-react";
 import { Typography } from "../../components/Typography";
 import { Button } from "../../components/button/Button";
 import { useForm, SubmitHandler } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { InputText } from "../../components/input/InputText";
 import { useEffect, useState } from "react";
 import { fetchCountry, getLocation } from "../../services/country";
 import { useFetch } from "../../hooks/useFetch";
 import { FetchResponse } from "../../types/useFetch";
-
-interface Inputs {
-  [key: string]: unknown;
-  firstName: string;
-  lastName: string;
-  profession: string;
-  company: string;
-  email: string;
-  country: string;
-}
-
-interface country {
-  name: {
-    common: string;
-  };
-}
+import { Ban, CheckCircle, LoaderCircle, Send } from "lucide-react";
+import { Inputs, country } from "../../types/FormSubscribe";
+import { sendEmail } from "../../services/email";
 
 export const SubscribeNewsletter = () => {
   const {
     register,
     handleSubmit,
     setValue,
+    reset,
     formState: { errors },
   } = useForm<Inputs>();
 
-  const {
-    data: dataCountry,
-    error: errorCountry,
-    loading: loadingCountry,
-  }: FetchResponse<country[]> = useFetch(fetchCountry);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+  const [success, setSuccess] = useState(false);
 
-  const {
-    data: dataLocation,
-    error: errorLocation,
-    loading: loadingLocation,
-  } = useFetch(getLocation);
+  const { data: dataCountry }: FetchResponse<country[]> =
+    useFetch(fetchCountry);
+
+  const { data: dataLocation } = useFetch(getLocation);
 
   useEffect(() => {
     if (dataLocation) {
@@ -52,20 +35,31 @@ export const SubscribeNewsletter = () => {
     }
   }, [setValue, dataLocation]);
 
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [success]);
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    emailjs
-      .send("service_kju7a6p", "template_qmy4wmf", data, {
-        publicKey: "xibh2DYXOBN7CmSwC",
-      })
-      .then(
-        (result) => {
-          console.log(result);
-        },
-        (error) => {
-          console.log(error);
-        },
-      );
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setSubmitting(true);
+    try {
+      const result = await sendEmail(data);
+      console.log(result);
+      setSuccess(true);
+      reset();
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error);
+      } else {
+        setError(new Error("An unknown error occurred."));
+      }
+    }
   };
 
   return (
@@ -183,15 +177,56 @@ export const SubscribeNewsletter = () => {
               </div>
             </div>
           </div>
-          <div className="mx-auto mt-4">
-            <Button
-              icon={<Send />}
-              iconPosition="right"
-              size="large"
-              variant="primary"
-            >
-              Subscribe
+          <div className="mx-auto mt-4 md:mx-0 md:me-auto">
+            <Button iconPosition="right" size="medium" variant="primary">
+              Suscribirse
+              {submitting ? (
+                <LoaderCircle
+                  className="animate-spin"
+                  style={{
+                    width: "1em",
+                    height: "1em",
+                    stroke: "currentColor",
+                    strokeWidth: "3.5",
+                  }}
+                />
+              ) : (
+                <Send
+                  style={{
+                    width: "1em",
+                    height: "1em",
+                    stroke: "currentColor",
+                    strokeWidth: "3.5",
+                  }}
+                />
+              )}
             </Button>
+            {error && (
+              <div className="mt-8 rounded-2xl border-2 border-red-700 bg-red-900/50 px-4 py-1.5 text-neutral-100">
+                <Ban
+                  className="inline-block"
+                  style={{
+                    color: "currentColor",
+                  }}
+                />
+                <span className="ms-4 inline-block">
+                  Ha ocurrido un error al enviar el correo
+                </span>
+              </div>
+            )}
+            {success && (
+              <div className="mt-8 rounded-2xl border-2 border-green-700 bg-green-900/50 px-4 py-1.5 text-neutral-100">
+                <CheckCircle
+                  className="inline-block"
+                  style={{
+                    color: "currentColor",
+                  }}
+                />
+                <span className="ms-4 inline-block">
+                  Correo enviado exitosamente
+                </span>
+              </div>
+            )}
           </div>
         </form>
       </div>
