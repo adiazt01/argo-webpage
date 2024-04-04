@@ -78,8 +78,6 @@ export const SubscribeNewsletter = () => {
           onSubmit={handleSubmit(onSubmit)}
           action="mailto:armandodt2004@gmail.com"
         >
-          {/* FIXME Improve the input fields */}
-          {/* TODO captcha */}
           <div className="flex flex-col justify-between gap-4 md:flex-row">
             <div>
               <InputText
