@@ -1,6 +1,7 @@
 import { Building, Link, Star } from "lucide-react";
 import { Typography } from "../../components/Typography";
 import { LayoutSection } from "../../layout/LayoutSection";
+import { Badge } from "../../components/badge/Badge";
 
 export const AboutUsSection = () => {
   return (
@@ -32,7 +33,7 @@ export const AboutUsSection = () => {
       <ul className="grid w-full grid-cols-1 gap-12">
         <article className="animation__fade-in relative flex min-h-48 flex-col justify-between gap-5 overflow-hidden rounded-2xl bg-gradient-to-t from-rose-800 from-70% to-pink-700 shadow-xl md:flex-row md:bg-gradient-to-l">
           <div className="flex flex-col gap-2 p-5 pt-5 lg:w-full">
-            <div className="mb-2 me-auto flex flex-row items-center gap-2 rounded-2xl border-2 border-rose-300 bg-gradient-to-br from-transparent to-rose-300/50 px-3 py-0.5 text-left text-xs text-neutral-100">
+            <Badge color="rose">
               <Building
                 style={{
                   width: "1.5em",
@@ -42,7 +43,8 @@ export const AboutUsSection = () => {
                 }}
               />
               <span>Crecimiento sostenible</span>
-            </div>
+            </Badge>
+
             <div className="px-2">
               <Typography className="text-left text-white" variant="h3">
                 Ecosistema

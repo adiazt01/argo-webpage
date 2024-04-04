@@ -7,5 +7,6 @@ export const adaptPost = (apiPost: PostApi) => {
     description: apiPost.description ?? null,
     urlToImage: apiPost.image_url ?? null,
     url: apiPost.link,
+    tags: apiPost.keywords ? apiPost.keywords.slice(0, 3) : [],
   };
 };
