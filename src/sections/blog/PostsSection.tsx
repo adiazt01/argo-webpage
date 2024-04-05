@@ -44,6 +44,7 @@ export const PostsSection = () => {
             value={selectedTag}
             onChange={(e) => {
               setSelectedTag(e.target.value);
+              changePage(0);
             }}
             aria-label="Filter by tag"
             className="p-2 border border-gray-300 rounded-md"
