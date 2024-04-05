@@ -16,7 +16,7 @@ export const JobCard = ({ job }: JobCardProps) => {
   const { role, location, description } = job;
 
   return (
-    <article className="relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
+    <article className="animation__fade-in--left relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
       <div className="flex min-h-56 flex-col gap-2">
         <img
           src="https://source.unsplash.com/1600x900/?job"

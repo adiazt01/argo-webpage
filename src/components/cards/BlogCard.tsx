@@ -9,7 +9,7 @@ export const BlogCard = ({ blog }: { blog: Post }) => {
   const { title, description, urlToImage, url, tags } = blog;
 
   return (
-    <article className="relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
+    <article className="animation__fade-in--left relative flex flex-col overflow-hidden rounded-t-2xl border border-black/5 shadow-md">
       {urlToImage && (
         <img
           src={urlToImage}
