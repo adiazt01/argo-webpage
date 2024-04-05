@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { Post } from "../types/Blog";
 import { fetchBlogPosts } from "../services/blogs";
 import { adaptPost } from "../helpers/postUtils";
+import dataset from "../mock/blog.json";
 
 interface BlogContextProps {
   posts: Post[];
@@ -23,9 +24,10 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiPosts = await fetchBlogPosts();
+        /* const apiPosts = await fetchBlogPosts(); */
+        const apiPosts = dataset;
         console.log(apiPosts);
-        const posts:Post[] = apiPosts.map(adaptPost);
+        const posts:Post[] = apiPosts.results.map(adaptPost);
         console.log(posts);
         setPosts(posts);
         setLoading(false);

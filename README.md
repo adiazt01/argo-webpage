@@ -19,6 +19,8 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
 - [lucide-icons](https://www.npmjs.com/package/lucide): Es una libreria de iconos que se pueden utilizar en la aplicación.
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form): Es una libreria que permite la validación de formularios y manejo de estados de los mismos. Es de facil uso y muy eficiente ademas permite la integración con librerias de validación como Yup o Zod.
 - [emailjs-com](https://www.npmjs.com/package/emailjs-com): Es una librería que permite el envió de correos electrónicos desde la aplicacion. Es muy facil de usar y permite el envio de correos desde el cliente sin necesidad de un servidor de correo.
+  - Email: testuseragorra@gmail.com
+  - Password: Agora123
 
 ## 🌌 Buenas practicas de desarrollo aplicadas
 

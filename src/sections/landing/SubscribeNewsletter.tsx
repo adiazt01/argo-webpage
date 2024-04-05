@@ -40,13 +40,13 @@ export const SubscribeNewsletter = () => {
       className="full flex min-h-96 flex-col items-center justify-center bg-neutral-800 px-8 py-24"
     >
       <div className="w-full max-w-4xl">
-        <header className="flex flex-col items-center justify-center gap-4 text-center md:text-left">
+        <header className="animation__fade-in--top flex flex-col items-center justify-center gap-4 text-center md:text-left">
           <Typography variant="h2" className="w-full text-white">
             Suscribete a nuestro boletin informativo
           </Typography>
         </header>
         <form
-          className="mt-12 grid grid-cols-1 items-center justify-center mx-auto gap-8"
+          className="mx-auto mt-12 grid grid-cols-1 items-center justify-center gap-8"
           onSubmit={handleSubmit(onSubmit)}
         >
           <fieldset className="grid grid-cols-1 gap-8 md:grid-cols-2">
