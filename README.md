@@ -6,6 +6,10 @@ Link de la pagina web: [Argo page](https://adiazt01.github.io/argo-webpage/)
 
 ![alt text](webpage.png)
 
+## 😎 Vista previa
+
+<video controls src="test_8La0h07a.mp4" title="Title"></video>
+
 ## ⚙ Tecnologías usadas
 
 - [React JS](https://reactjs.org/): Es una biblioteca de JavaScript para construir interfaces de usuario.
@@ -19,7 +23,7 @@ Link de la pagina web: [Argo page](https://adiazt01.github.io/argo-webpage/)
 - [lucide-icons](https://www.npmjs.com/package/lucide): Es una librería de iconos que se pueden utilizar en la aplicación.
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form): Es una librería que permite la validación de formularios y manejo de estados de los mismos. Es de fácil uso y muy eficiente ademas permite la integración con librerias de validación como Yup o Zod.
 - [emailjs-com](https://www.npmjs.com/package/emailjs-com): Es una librería que permite el envió de correos electrónicos desde la aplicación. Es muy fácil de usar y permite el envió de correos desde el cliente sin necesidad de un servidor de correo. Adjunto el correo para testear dicho formulario:
-  - Email: testuseragorra@gmail.com
+  - Email: <testuseragorra@gmail.com>
   - Password: Agora123
 
 ## 🌌 Buenas practicas de desarrollo aplicadas
