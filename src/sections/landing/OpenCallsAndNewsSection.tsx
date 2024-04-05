@@ -2,17 +2,10 @@ import { useContext } from "react";
 import { Typography } from "../../components/Typography";
 import { BlogCard } from "../../components/cards/BlogCard";
 import { LayoutSection } from "../../layout/LayoutSection";
-import datatest from "../../mock/blog.json";
 import { BlogContext } from "../../context/BlogContext";
-import { Post, PostApi } from "../../types/Blog";
 
 export const OpenCallsAndNewsSection = () => {
-  // To production code, we should use the commented line below
   const { posts } = useContext(BlogContext);
-
-  // To test the component isolated, we can use the line below
-  // const posts = datatest;
-  // const adaptedPosts = posts.results.map(adaptPost);
 
   return (
     <LayoutSection id="open-calls-and-news-section">
