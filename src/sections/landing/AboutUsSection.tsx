@@ -1,10 +1,12 @@
-import { BarChart, Briefcase, Building, Link } from "lucide-react";
+import { BarChart, Briefcase, Building, Link as LinkIcon } from "lucide-react";
 import { Typography } from "../../components/Typography";
+
 import { LayoutSection } from "../../layout/LayoutSection";
 import { Badge } from "../../components/badge/Badge";
 import { JumbotronHeader } from "../../components/jumbotron/JumbotronHeader";
 import { womenEnterprise, womanGreenHouse, planEnterpise } from "../../assets";
 import { JumbotronChild } from "../../components/jumbotron/JumbotronChild";
+import { Link } from "../../components/link/Link";
 
 export const AboutUsSection = () => {
   return (
@@ -20,12 +22,11 @@ export const AboutUsSection = () => {
             su camino hacia la sostenibilidad económica, social y ambiental.
           </Typography>
         </div>
-        <div className="flex w-full flex-row justify-end">
-          {/* FIXME add respctiv link to the page */}
-          <a href="/login" className="">
+        <div className="flex h-auto w-full items-start justify-start md:justify-end">
+          <Link appearance="link" variant="secondary" to="/blog">
             Conocer mas sobre nuestrto programas{" "}
-            <Link className="inline-block" />
-          </a>
+            <LinkIcon className="inline-block" />
+          </Link>
         </div>
       </header>
       <ul className="grid w-full grid-cols-1 gap-12">
