@@ -126,7 +126,7 @@ export const SubscribeNewsletter = () => {
               <div>
                 <select
                   id="pet-select"
-                  className="text-md w-96 max-w-96 rounded-md border-2 border-white/15 bg-neutral-700/80 py-1.5 pe-6 ps-2 text-white shadow-md outline-none transition-all duration-200  focus:border-green-500/50"
+                  className="text-md w-full max-w-96 rounded-md border-2 border-white/15 bg-neutral-700/80 py-1.5 pe-6 ps-2 text-white shadow-md outline-none transition-all duration-200  focus:border-green-500/50"
                   {...register("country", { required: true })}
                 >
                   {dataCountry
