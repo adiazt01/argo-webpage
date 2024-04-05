@@ -24,20 +24,18 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        /* const apiPosts = await fetchBlogPosts(); */
-        const apiPosts = dataset;
-        console.log(apiPosts);
-        const posts:Post[] = apiPosts.results.map(adaptPost);
+        const apiPosts = await fetchBlogPosts();
+        const posts: Post[] = apiPosts.map(adaptPost);
         console.log(posts);
         setPosts(posts);
         setLoading(false);
       } catch (error) {
         if (error instanceof Error) {
+          const posts: Post[] = dataset.results.map(adaptPost);
+          setPosts(posts);
           setError(error);
-        } else {
-          setError(new Error("An unknown error occurred"));
+          setLoading(false);
         }
-        setLoading(false);
       }
     };
 

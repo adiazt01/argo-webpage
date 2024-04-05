@@ -1,7 +1,7 @@
 import { PostApi } from "../types/Blog";
 
 interface ApiResponse {
-  articles: PostApi[];
+  results: PostApi[];
 }
 
 export async function fetchBlogPosts() {
@@ -10,5 +10,5 @@ export async function fetchBlogPosts() {
   );
 
   const data = (await response.json()) as ApiResponse;
-  return data.articles;
+  return data.results;
 }
