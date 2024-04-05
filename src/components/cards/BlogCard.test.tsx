@@ -11,6 +11,7 @@ describe("BlogCard", () => {
     urlToImage: "https://test.com/image.jpg",
     url: "/test-blog",
     id: "1",
+    tags: ["test"],
   };
 
   it("renders the blog content", () => {
@@ -24,6 +25,7 @@ describe("BlogCard", () => {
     expect(screen.getByText("Test Blog")).toBeInTheDocument();
     expect(screen.getByText("Continuar leyendo")).toBeInTheDocument();
     expect(screen.getByAltText("Imagen de Test Blog")).toBeInTheDocument();
+    expect(screen.getByText("test")).toBeInTheDocument();
   });
 
   it("truncates the description if it's longer than 125 characters", () => {

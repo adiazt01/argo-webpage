@@ -6,7 +6,7 @@ import { Newspaper } from "lucide-react";
 export const HeroSection = () => {
   return (
     <>
-      <main className="mx-auto my-24 flex max-w-6xl flex-col justify-start gap-12 border border-red-500 px-4">
+      <main className="mx-auto my-24 flex max-w-6xl flex-col justify-start gap-12 px-4">
         <header className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="flex min-h-56 flex-col items-center justify-center gap-2 rounded-md bg-gradient-to-br from-blue-900 to-blue-700 p-6 text-center text-white shadow md:items-start md:justify-start md:text-left">
             <Badge color="blue">
