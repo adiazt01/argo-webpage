@@ -38,7 +38,6 @@ export const Navbar = () => {
       }
     >
       <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-8 md:gap-14">
-        {/* TODO add logo link and href with Link react-router-dom component */}
         <div className="flex flex-row gap-12">
           <Link appearance="link" to="/">
             <img src={LogoComplete} alt="Logo" className="h-11" />
