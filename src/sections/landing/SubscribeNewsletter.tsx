@@ -46,10 +46,10 @@ export const SubscribeNewsletter = () => {
           </Typography>
         </header>
         <form
-          className="mt-12 flex max-w-4xl flex-col gap-8"
+          className="mt-12 grid grid-cols-1 items-center justify-center mx-auto gap-8"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col mx-auto lg:mx-0 justify-between gap-4 md:flex-row">
+          <fieldset className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <InputText
                 label="Nombre"
@@ -74,8 +74,8 @@ export const SubscribeNewsletter = () => {
                 </div>
               )}
             </div>
-          </div>
-          <div className="flex flex-col mx-auto lg:mx-0  justify-between gap-8 md:flex-row">
+          </fieldset>
+          <fieldset className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <InputText
                 label="Profesion"
@@ -102,8 +102,8 @@ export const SubscribeNewsletter = () => {
                 </div>
               )}
             </div>
-          </div>
-          <div className="flex flex-col mx-auto lg:mx-0  justify-between gap-8 md:flex-row">
+          </fieldset>
+          <fieldset className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <InputText
                 label="Correo"
@@ -145,7 +145,7 @@ export const SubscribeNewsletter = () => {
                 )}
               </div>
             </div>
-          </div>
+          </fieldset>
           <div className="mx-auto mt-4 md:mx-0 md:me-auto">
             <Button iconPosition="right" size="medium" variant="primary">
               Suscribirse
