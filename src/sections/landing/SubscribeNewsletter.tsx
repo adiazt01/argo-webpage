@@ -147,7 +147,16 @@ export const SubscribeNewsletter = () => {
             </div>
           </fieldset>
           <div className="mx-auto mt-4 md:mx-0 md:me-auto">
-            <Button iconPosition="right" size="medium" variant="primary">
+            <Button
+              disabled={
+                message.value && message.value === "Submitting..."
+                  ? true
+                  : false
+              }
+              iconPosition="right"
+              size="medium"
+              variant="primary"
+            >
               Suscribirse
               {message.value ? (
                 <LoaderCircle

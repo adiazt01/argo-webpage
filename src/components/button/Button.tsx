@@ -17,6 +17,7 @@ export const Button = ({
   icon,
   iconPosition = "left",
   size = "medium",
+  disabled = false,
   ...props
 }: BaseButtonProps) => {
   const styleButton = `${styles[variant]} ${styles[size]}`;
@@ -34,7 +35,7 @@ export const Button = ({
     });
 
     return (
-      <button className={styleButton} {...props}>
+      <button disabled={disabled} className={styleButton} {...props}>
         {iconPosition === "left" && Icon} {children}{" "}
         {iconPosition === "right" && Icon}
       </button>
@@ -42,7 +43,7 @@ export const Button = ({
   }
 
   return (
-    <button className={styleButton} {...props}>
+    <button disabled={disabled} className={styleButton} {...props}>
       {children}
     </button>
   );

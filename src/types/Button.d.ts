@@ -9,5 +9,6 @@ export interface BaseButtonProps {
   icon?: ReactElement;
   iconPosition?: IconPosition;
   size?: ButtonSize;
+  disabled?: boolean;
   children: React.ReactNode;
 }

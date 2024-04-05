@@ -1,12 +1,12 @@
 # 🌎 Proyecto Agora 2030
 
 Proyecto de desarrollo de una pagina web para la empresa Agora2030 con el fin de mejorar la experiencia de usuario y la presentación de la empresa.
-<!-- FIXME add web page project -->
-Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts.vercel.app/)
+
+Link de la pagina web: [Argo page](https://adiazt01.github.io/argo-webpage/)
 
 ![alt text](webpage.png)
 
-## ⚙ Tecnologias usadas
+## ⚙ Tecnologías usadas
 
 - [React JS](https://reactjs.org/): Es una biblioteca de JavaScript para construir interfaces de usuario.
 - [TypeScript](https://www.typescriptlang.org/): Es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft.
@@ -16,18 +16,18 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
 ## 📦 Paquetes de terceros empleadas
 
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom): Es una colección de enlaces de navegación y componentes de navegación para sitios web. Permiten la navegación declarativa y basada en componentes en aplicaciones React. Es decir que permite la navegación entre diferentes componentes de la aplicación.
-- [lucide-icons](https://www.npmjs.com/package/lucide): Es una libreria de iconos que se pueden utilizar en la aplicación.
-- [react-hook-form](https://www.npmjs.com/package/react-hook-form): Es una libreria que permite la validación de formularios y manejo de estados de los mismos. Es de facil uso y muy eficiente ademas permite la integración con librerias de validación como Yup o Zod.
-- [emailjs-com](https://www.npmjs.com/package/emailjs-com): Es una librería que permite el envió de correos electrónicos desde la aplicacion. Es muy facil de usar y permite el envio de correos desde el cliente sin necesidad de un servidor de correo.
+- [lucide-icons](https://www.npmjs.com/package/lucide): Es una librería de iconos que se pueden utilizar en la aplicación.
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form): Es una librería que permite la validación de formularios y manejo de estados de los mismos. Es de fácil uso y muy eficiente ademas permite la integración con librerias de validación como Yup o Zod.
+- [emailjs-com](https://www.npmjs.com/package/emailjs-com): Es una librería que permite el envió de correos electrónicos desde la aplicación. Es muy fácil de usar y permite el envió de correos desde el cliente sin necesidad de un servidor de correo. Adjunto el correo para testear dicho formulario:
   - Email: testuseragorra@gmail.com
   - Password: Agora123
 
 ## 🌌 Buenas practicas de desarrollo aplicadas
 
-- ✅ Cada seccion del sitio web se encuentra en un componente independiente para facilitar la reutilización de los mismos.
-- ✅ La logica y manejo del estado se encuentra en los custom hooks para facilitar la reutilización de la lógica. Permitiendo separar las responsabilidades de los componentes, es deciir se siguio el patron SRP (Single Responsibility Principle).
-- ✅ El desarrollo de la pagina web se hizo principalmente con desarrollo movil first, es decir se desarrollo primero para dispositivos moviles y luego se adapto a dispositivos de escritorio. Permitiendo una mejor experiencia de usuario en dispositivos moviles asi como en dispositivos de escritorio.
-- ✅ La estructura de carpetas se realizo de forma ordenada y clara para facilitar la lectura y mantenimiento del codigo.
+- ✅ Cada sección del sitio web se encuentra en un componente independiente para facilitar la reutilización de los mismos.
+- ✅ La lógica y manejo del estado se encuentra en los custom hooks para facilitar la reutilización de la lógica. Permitiendo separar las responsabilidades de los componentes, es decir se siguió el patron SRP (Single Responsibility Principle).
+- ✅ El desarrollo de la pagina web se hizo principalmente con desarrollo Movil First, es decir se desarrollo primero para dispositivos móviles y luego se adapto a dispositivos de escritorio. Permitiendo una mejor experiencia de usuario en dispositivos móviles asi como en dispositivos de escritorio.
+- ✅ La estructura de carpetas se realizo de forma ordenada y clara para facilitar la lectura y mantenimiento del código.
 
 ```bash
 .
@@ -68,14 +68,45 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
 - 👟 **Optimización**: Se comprimieron y convirtieron la mayoría de las imágenes al formato `webp` permitiendo mayor rendimiento y menos uso de recursos para el uso de estas. Ademas de mejorar la accesibilidad de las etiquetas `HTML`.
 - 🧪 **Test de integración y unitarios** : Se realizaron pruebas unitarias y de integración para garantizar el correcto funcionamiento de la aplicación. Garantizando la fiabilidad del código. La pagina de la landing posee tanto test de integración como unitarios.
 
-## 🚀 Sugerencias de mejoras
+## 🚀 Consideraciones de la prueba ademas de mejoras
 
+### 💀 Dificultades tecnicas
+
+- 📦 **REST API FALLIDA**: La petición de la API REST puede fallar debido a la capa gratuita de la API, por ello se implemento un mock de la API para poder mostrar los datos en la pagina web. Ademas se implemento un mensaje de error en caso de que la API falle.
+
+  ```javascript
+   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const apiPosts = await fetchBlogPosts();
+        const posts: Post[] = apiPosts.map(adaptPost);
+        console.log(posts);
+        setPosts(posts);
+        setLoading(false);
+      } catch (error) {
+        if (error instanceof Error) {
+          const posts: Post[] = dataset.results.map(adaptPost);
+          setPosts(posts);
+          setError(error);
+          setLoading(false);
+        }
+      }
+    };
+
+    void fetchData();
+  }, []);
+  ```
+
+### 📈 Mejoras
+
+- La sección del header se puede mejorar para hacer algún tipo de diseño que no dependa del formato o de la calidad de la imagen, Permitiendo una mejor experiencia de usuario en distintas pantallas y resoluciones.
 
 ## 👥 Reconocimiento a los Recursos Empleados
 
-- 🌐 **[API REST](https://newsdata.io/)**: La API que se uso para la solicitud de los articulos fue obtenido de News Data.
+- 🌐 **[API REST](https://newsdata.io/)**: La API que se uso para la solicitud de los artículos fue obtenido de News Data.
 
-- 📷 **[Imágenes](https://unsplash.com)**: Gracias a la pagina web Unsplash y Freepik se extrayeron las siguientes fotografias:
+- 📷 **[Imágenes](https://unsplash.com)**: Gracias a la pagina web Unsplash y Freepik se extrayeron las siguientes fotografías:
+
   - **🖼 [Imagen 404 de storyset](https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm#query=404%20page%20found&position=3&from_view=keyword&track=ais&uuid=4d518585-71c1-43e5-b0b1-0b9753d3231b)**
 
   - **🖼[Imagen de tonodiaz en Freepik](https://www.freepik.es/foto-gratis/tengo-negocio-crecimiento-retrato-bella-empresaria-sonriendo-haciendo-contacto-visual-mientras-prepara-paquetes-listos-enviar-clientes_27999290.htm#query=emprendedor&position=2&from_view=keyword&track=sph&uuid=12bbbd49-7d3a-4382-9277-f10154892fce)**
@@ -90,7 +121,7 @@ Link de la pagina web: [https://vite-react-ts.vercel.app/](https://vite-react-ts
 
 - 🎁 **[Logos](https://agora2030.org/)**: Los iconos fueron extraídos desde la propia web principal de [Agora2030](https://agora2030.org/)
 
-## 👩‍💻 Enlaces para mas informacion de la prueba
+## 👩‍💻 Enlaces para mas información de la prueba
 
 - Link to the test: [https://vite-react-ts.vercel.app/](https://gist.github.com/fabianmedina09/73a7e4fa45f133aff2baedb25f174b0e)
 

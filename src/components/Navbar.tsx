@@ -20,9 +20,6 @@ export const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const { isScrolling } = useScroll({ setToggle });
 
-  // TODO add active class to the current page
-  // TODO add the link const with the links to the pages
-
   return (
     <header
       id="navbar"
@@ -43,9 +40,9 @@ export const Navbar = () => {
       <div className="mx-auto flex w-full max-w-6xl flex-row items-center justify-between px-8 md:gap-14">
         {/* TODO add logo link and href with Link react-router-dom component */}
         <div className="flex flex-row gap-12">
-          <a href="/">
+          <Link appearance="link" to="/">
             <img src={LogoComplete} alt="Logo" className="h-11" />
-          </a>
+          </Link>
         </div>
         <nav className="hidden items-center justify-center gap-5 md:flex">
           {LinksSite.map((link) => (
@@ -82,7 +79,6 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* TODO add animations and transitions */}
       {toggle && (
         <div className="sticky top-16 flex w-full flex-col items-center justify-center gap-4 py-5 md:hidden">
           {LinksSite.map((link) => (
